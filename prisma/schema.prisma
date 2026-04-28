@@ -23,6 +23,19 @@ enum CategorizationSource {
   AI
 }
 
+enum StatementParsingStatus {
+  PENDING
+  PARSED
+  FAILED
+}
+
+enum StatementVerificationStatus {
+  PENDING
+  PASSED
+  FAILED
+  OVERRIDDEN
+}
+
 model Transaction {
   id          String          @id @default(cuid())
   date        DateTime
@@ -71,4 +84,27 @@ model AppSettings {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Statement {
+  id String @id @default(cuid())
+
+  institutionName String
+  accountName String
+  statementStartDate DateTime
+  statementEndDate DateTime
+  openingBalance Decimal
+  closingBalance Decimal
+  uploadedFileName String
+  parsingStatus StatementParsingStatus @default(PENDING)
+  verificationStatus StatementVerificationStatus @default(PENDING)
+  verificationDifference Decimal? // closing - (opening + sum)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([statementStartDate])
+  @@index([statementEndDate])
+  @@index([parsingStatus])
+  @@index([verificationStatus])
 }
