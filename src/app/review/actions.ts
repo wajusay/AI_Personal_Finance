@@ -12,13 +12,24 @@ const correctSchema = z.object({
   applyRule: z.enum(["on"]).optional(),
 });
 
-export async function approveTransaction(id: string) {
+const approveSchema = z.object({
+  category: z.string().trim().min(1),
+});
+
+export async function approveTransaction(id: string, formData: FormData) {
+  const raw = Object.fromEntries(formData.entries());
+  const parsed = approveSchema.safeParse(raw);
+  if (!parsed.success) redirect("/review?error=invalid-approve");
+
   const tx = await prisma.transaction.findUnique({ where: { id } });
   if (!tx) redirect("/review");
+
+  const category = parsed.data.category;
 
   await prisma.transaction.update({
     where: { id },
     data: {
+      category,
       needsReview: false,
       reviewedAt: new Date(),
       confidenceScore: 1,

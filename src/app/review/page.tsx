@@ -37,7 +37,7 @@ async function getSuggestedCategory(merchant: string) {
 export default async function ReviewQueuePage() {
   const txs = await prisma.transaction.findMany({
     where: {
-      OR: [{ needsReview: true }, { category: "Needs Review" }],
+      needsReview: true,
     },
     orderBy: [{ date: "desc" }, { createdAt: "desc" }],
     take: 200,
@@ -91,6 +91,9 @@ export default async function ReviewQueuePage() {
                   const suggested = suggestionMap.get(t.id);
                   const confidence =
                     t.confidenceScore ?? (suggested ? suggested.confidence : null);
+                  const approveCategory =
+                    t.category !== "Needs Review" ? t.category : suggested?.category ?? "";
+                  const canApprove = approveCategory.trim().length > 0 && approveCategory !== "Needs Review";
                   return (
                     <TableRow key={t.id}>
                       <TableCell className="text-sm">{formatDateShort(t.date)}</TableCell>
@@ -119,11 +122,19 @@ export default async function ReviewQueuePage() {
                       <TableCell>
                         <div className="grid gap-3">
                           <form action={approveTransaction.bind(null, t.id)} className="flex items-center gap-2">
-                            <Button size="sm" type="submit" variant="secondary">
+                            <input type="hidden" name="category" value={approveCategory} />
+                            <Button size="sm" type="submit" variant="secondary" disabled={!canApprove}>
                               Approve
                             </Button>
                             <span className="text-xs text-muted-foreground">
-                              Keep as <span className="font-medium">Needs Review</span> (or already-set category)
+                              {canApprove ? (
+                                <>
+                                  Apply{" "}
+                                  <span className="font-medium text-foreground">{approveCategory}</span>
+                                </>
+                              ) : (
+                                <>No suggestion yet — use Correct to set a category</>
+                              )}
                             </span>
                           </form>
 
