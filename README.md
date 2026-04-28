@@ -1,4 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## AI Personal Finance (V1)
+
+Local-first, privacy-first personal finance ledger.
+
+### Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS + shadcn/ui
+- Prisma + SQLite
+
+### Dev setup
+
+```bash
+npm install
+npx prisma migrate dev
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+### What’s included (V1)
+
+- Dashboard: totals (income/expenses/net), recent transactions, spending by category
+- Transactions: searchable + filters (category/date/type), edit/delete
+- Add transaction form
+
+### Notes
+
+- No authentication yet
+- No AI yet
+- SQLite DB is local (`prisma/dev.db`) and ignored by git
 
 ## Getting Started
 
