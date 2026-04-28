@@ -29,11 +29,11 @@ export async function createTransaction(formData: FormData) {
   const raw = Object.fromEntries(formData.entries());
   const parsed = transactionInputSchema.safeParse(raw);
   if (!parsed.success) {
-    return { ok: false as const, message: "Please check the form fields." };
+    redirect("/transactions/new?error=invalid");
   }
 
   const date = parseDate(parsed.data.date);
-  if (!date) return { ok: false as const, message: "Invalid date." };
+  if (!date) redirect("/transactions/new?error=invalid-date");
 
   await prisma.transaction.create({
     data: {
@@ -63,11 +63,11 @@ export async function updateTransaction(id: string, formData: FormData) {
   const raw = Object.fromEntries(formData.entries());
   const parsed = transactionInputSchema.safeParse(raw);
   if (!parsed.success) {
-    return { ok: false as const, message: "Please check the form fields." };
+    redirect(`/transactions/${id}/edit?error=invalid`);
   }
 
   const date = parseDate(parsed.data.date);
-  if (!date) return { ok: false as const, message: "Invalid date." };
+  if (!date) redirect(`/transactions/${id}/edit?error=invalid-date`);
 
   await prisma.transaction.update({
     where: { id },
