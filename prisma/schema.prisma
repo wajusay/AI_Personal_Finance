@@ -16,6 +16,13 @@ enum TransactionType {
   EXPENSE
 }
 
+enum CategorizationSource {
+  MANUAL
+  RULE
+  IMPORT
+  AI
+}
+
 model Transaction {
   id          String          @id @default(cuid())
   date        DateTime
@@ -25,6 +32,9 @@ model Transaction {
   type        TransactionType
   category    String          @default("Needs Review")
   needsReview Boolean         @default(true)
+  confidenceScore Float?
+  categorizationSource CategorizationSource @default(IMPORT)
+  reviewedAt   DateTime?
   accountName String
   notes       String?
   createdAt   DateTime        @default(now())
@@ -34,6 +44,7 @@ model Transaction {
   @@index([type])
   @@index([category])
   @@index([needsReview])
+  @@index([reviewedAt])
 }
 
 model CategoryRule {
