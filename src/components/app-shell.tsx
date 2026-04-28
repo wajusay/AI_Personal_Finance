@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { NavLink } from "@/components/nav-link";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   return (
@@ -18,9 +18,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             </nav>
           </div>
           <div className="flex items-center gap-2">
-            <Button asChild size="sm">
-              <Link href="/transactions/new">Add</Link>
-            </Button>
+            <Link
+              href="/transactions/new"
+              className={buttonVariants({ size: "sm" })}
+            >
+              Add
+            </Link>
           </div>
         </div>
       </header>

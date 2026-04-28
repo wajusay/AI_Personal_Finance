@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -45,12 +45,15 @@ export default async function DashboardPage() {
           </p>
         </div>
         <div className="flex gap-2">
-          <Button asChild variant="secondary">
-            <Link href="/transactions">View transactions</Link>
-          </Button>
-          <Button asChild>
-            <Link href="/transactions/new">Add</Link>
-          </Button>
+          <Link
+            href="/transactions"
+            className={buttonVariants({ variant: "secondary" })}
+          >
+            View transactions
+          </Link>
+          <Link href="/transactions/new" className={buttonVariants()}>
+            Add
+          </Link>
         </div>
       </div>
 
@@ -123,9 +126,12 @@ export default async function DashboardPage() {
             <Separator className="my-4" />
             <div className="flex items-center justify-between">
               <div className="text-sm text-muted-foreground">Manage your ledger</div>
-              <Button asChild size="sm" variant="secondary">
-                <Link href="/transactions">Open transactions</Link>
-              </Button>
+              <Link
+                href="/transactions"
+                className={buttonVariants({ size: "sm", variant: "secondary" })}
+              >
+                Open transactions
+              </Link>
             </div>
           </CardContent>
         </Card>
