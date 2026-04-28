@@ -50,6 +50,15 @@ function findFirstMatch(lines: string[], re: RegExp) {
   return null;
 }
 
+function extractDateRangeFromMatch(m: RegExpExecArray | null) {
+  if (!m) return { start: null as string | null, end: null as string | null };
+  const dates = m
+    .slice(1)
+    .map((g) => (typeof g === "string" ? parseDateToken(g) : null))
+    .filter((d): d is string => !!d);
+  return { start: dates[0] ?? null, end: dates[1] ?? null };
+}
+
 export function parseStatementText(text: string): ExtractedStatement {
   const lines = text
     .split("\n")
@@ -64,8 +73,7 @@ export function parseStatementText(text: string): ExtractedStatement {
     findFirstMatch(lines, /(statement period|period|from)\s*:?\s*(\d{1,2}\/\d{1,2}\/\d{4})\s*(to|\-|through)\s*(\d{1,2}\/\d{1,2}\/\d{4})/i) ??
     findFirstMatch(lines, /(\d{1,2}\/\d{1,2}\/\d{4})\s*(to|\-|through)\s*(\d{1,2}\/\d{1,2}\/\d{4})/i);
 
-  const statementStartDate = range ? parseDateToken(range[2] ?? range[1]) : null;
-  const statementEndDate = range ? parseDateToken(range[4] ?? range[3]) : null;
+  const { start: statementStartDate, end: statementEndDate } = extractDateRangeFromMatch(range);
 
   // Account name: try to find "Account" line.
   const acct =

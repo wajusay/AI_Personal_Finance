@@ -23,6 +23,29 @@ enum CategorizationSource {
   AI
 }
 
+enum EntityType {
+  PERSONAL
+  LLC
+  TRUST
+  FOUNDATION
+  BUSINESS
+  PROPERTY
+}
+
+enum DocumentationStatus {
+  UNKNOWN
+  NOT_NEEDED
+  NEEDED
+  UPLOADED
+  MISSING
+}
+
+enum AuditRiskLevel {
+  LOW
+  MEDIUM
+  HIGH
+}
+
 enum StatementParsingStatus {
   PENDING
   PARSED
@@ -50,6 +73,13 @@ model Transaction {
   aiSuggestedCategory String?
   aiReasoning String?
   reviewedAt   DateTime?
+  entityId    String?
+  entity      Entity?         @relation(fields: [entityId], references: [id])
+  taxCategoryId String?
+  taxCategory TaxCategory?    @relation(fields: [taxCategoryId], references: [id])
+  businessPurpose String?
+  deductiblePercentage Int?   // 0..100
+  documentationStatus DocumentationStatus @default(UNKNOWN)
   accountName String
   notes       String?
   createdAt   DateTime        @default(now())
@@ -60,6 +90,8 @@ model Transaction {
   @@index([category])
   @@index([needsReview])
   @@index([reviewedAt])
+  @@index([entityId])
+  @@index([taxCategoryId])
 }
 
 model CategoryRule {
@@ -84,6 +116,35 @@ model AppSettings {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Entity {
+  id String @id @default(cuid())
+  name String
+  type EntityType @default(PERSONAL)
+  notes String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  transactions Transaction[]
+
+  @@index([type])
+}
+
+model TaxCategory {
+  id String @id @default(cuid())
+  name String
+  schedule String?
+  lineItem String?
+  description String?
+  requiresDocumentation Boolean @default(false)
+  auditRiskLevel AuditRiskLevel @default(MEDIUM)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  transactions Transaction[]
+
+  @@index([auditRiskLevel])
 }
 
 model Statement {

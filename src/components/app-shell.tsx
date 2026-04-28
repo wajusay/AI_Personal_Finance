@@ -18,6 +18,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <NavLink href="/review">Action Required</NavLink>
               <NavLink href="/import">Import</NavLink>
               <NavLink href="/statements/new">Statements</NavLink>
+              <NavLink href="/entities">Entities</NavLink>
+              <NavLink href="/tax-categories">Tax Categories</NavLink>
+              <NavLink href="/tax-review">Tax Review</NavLink>
               <NavLink href="/rules">Rules</NavLink>
               <NavLink href="/settings">Settings</NavLink>
             </nav>

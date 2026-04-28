@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { CategorizationSource, TransactionType } from "@prisma/client";
+import { CategorizationSource, DocumentationStatus, TransactionType } from "@prisma/client";
 import { z } from "zod";
 
 import { prisma } from "@/lib/db";
@@ -14,6 +14,19 @@ const transactionInputSchema = z.object({
   amount: z.coerce.number().finite(),
   type: z.enum([TransactionType.INCOME, TransactionType.EXPENSE]),
   category: z.string().trim().min(1),
+  entityId: z.string().trim().optional(),
+  taxCategoryId: z.string().trim().optional(),
+  businessPurpose: z.string().trim().optional(),
+  deductiblePercentage: z.coerce.number().int().min(0).max(100).optional(),
+  documentationStatus: z
+    .enum([
+      DocumentationStatus.UNKNOWN,
+      DocumentationStatus.NOT_NEEDED,
+      DocumentationStatus.NEEDED,
+      DocumentationStatus.UPLOADED,
+      DocumentationStatus.MISSING,
+    ])
+    .optional(),
   accountName: z.string().trim().min(1),
   notes: z.string().trim().optional(),
 });
@@ -48,6 +61,14 @@ export async function createTransaction(formData: FormData) {
       categorizationSource: CategorizationSource.MANUAL,
       reviewedAt:
         parsed.data.category.trim().toLowerCase() === "needs review" ? null : new Date(),
+      entityId: parsed.data.entityId || null,
+      taxCategoryId: parsed.data.taxCategoryId || null,
+      businessPurpose: parsed.data.businessPurpose || null,
+      deductiblePercentage:
+        typeof parsed.data.deductiblePercentage === "number"
+          ? parsed.data.deductiblePercentage
+          : null,
+      documentationStatus: parsed.data.documentationStatus ?? DocumentationStatus.UNKNOWN,
       accountName: parsed.data.accountName,
       notes: parsed.data.notes || null,
     },
@@ -88,6 +109,14 @@ export async function updateTransaction(id: string, formData: FormData) {
       categorizationSource: CategorizationSource.MANUAL,
       reviewedAt:
         parsed.data.category.trim().toLowerCase() === "needs review" ? null : new Date(),
+      entityId: parsed.data.entityId || null,
+      taxCategoryId: parsed.data.taxCategoryId || null,
+      businessPurpose: parsed.data.businessPurpose || null,
+      deductiblePercentage:
+        typeof parsed.data.deductiblePercentage === "number"
+          ? parsed.data.deductiblePercentage
+          : null,
+      documentationStatus: parsed.data.documentationStatus ?? DocumentationStatus.UNKNOWN,
       accountName: parsed.data.accountName,
       notes: parsed.data.notes || null,
     },

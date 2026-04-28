@@ -26,8 +26,8 @@ export async function POST(req: Request) {
   }
 
   const bytes = new Uint8Array(await file.arrayBuffer());
+  const parser = new PDFParse({ data: bytes });
   try {
-    const parser = new PDFParse({ data: bytes });
     const data = await parser.getText();
     const text = normalizeText(String(data.text ?? ""));
 
@@ -53,6 +53,8 @@ export async function POST(req: Request) {
       { error: "Failed to read PDF. Ensure it is a text-based PDF." },
       { status: 400 },
     );
+  } finally {
+    await parser.destroy().catch(() => undefined);
   }
 }
 

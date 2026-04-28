@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { prisma } from "@/lib/db";
 
 function toDateInputValue(d: Date) {
   const yyyy = d.getUTCFullYear();
@@ -14,8 +15,12 @@ function toDateInputValue(d: Date) {
   return `${yyyy}-${mm}-${dd}`;
 }
 
-export default function NewTransactionPage() {
+export default async function NewTransactionPage() {
   const defaultDate = toDateInputValue(new Date());
+  const [entities, taxCategories] = await Promise.all([
+    prisma.entity.findMany({ orderBy: { name: "asc" } }),
+    prisma.taxCategory.findMany({ orderBy: { name: "asc" } }),
+  ]);
 
   return (
     <div className="mx-auto w-full max-w-2xl">
@@ -67,6 +72,77 @@ export default function NewTransactionPage() {
                 <Label htmlFor="category">Category</Label>
                 <Input id="category" name="category" placeholder="e.g. Groceries" required />
               </div>
+            </div>
+
+            <div className="grid gap-2 sm:grid-cols-2">
+              <div className="grid gap-2">
+                <Label htmlFor="entityId">Entity (optional)</Label>
+                <select
+                  id="entityId"
+                  name="entityId"
+                  defaultValue=""
+                  className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  <option value="">—</option>
+                  {entities.map((e) => (
+                    <option key={e.id} value={e.id}>
+                      {e.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="taxCategoryId">Tax category (optional)</Label>
+                <select
+                  id="taxCategoryId"
+                  name="taxCategoryId"
+                  defaultValue=""
+                  className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  <option value="">—</option>
+                  {taxCategories.map((c) => (
+                    <option key={c.id} value={c.id}>
+                      {c.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <div className="grid gap-2 sm:grid-cols-2">
+              <div className="grid gap-2">
+                <Label htmlFor="businessPurpose">Business purpose (optional)</Label>
+                <Input id="businessPurpose" name="businessPurpose" placeholder="e.g. client meeting" />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="deductiblePercentage">Deductible % (optional)</Label>
+                <Input
+                  id="deductiblePercentage"
+                  name="deductiblePercentage"
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="1"
+                  placeholder="100"
+                />
+              </div>
+            </div>
+
+            <div className="grid gap-2">
+              <Label htmlFor="documentationStatus">Documentation status</Label>
+              <select
+                id="documentationStatus"
+                name="documentationStatus"
+                defaultValue="UNKNOWN"
+                className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              >
+                <option value="UNKNOWN">Unknown</option>
+                <option value="NOT_NEEDED">Not needed</option>
+                <option value="NEEDED">Needed</option>
+                <option value="UPLOADED">Uploaded</option>
+                <option value="MISSING">Missing</option>
+              </select>
+              <p className="text-xs text-muted-foreground">Review with tax advisor.</p>
             </div>
 
             <div className="grid gap-2">
