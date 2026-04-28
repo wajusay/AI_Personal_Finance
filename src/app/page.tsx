@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Transaction } from "@prisma/client";
 
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
@@ -29,7 +30,7 @@ export default async function DashboardPage() {
       orderBy: { _sum: { amount: "desc" } },
       take: 8,
     }),
-  ]);
+  ] as const);
 
   const totalIncome = Number(incomeAgg._sum.amount ?? 0);
   const totalExpenses = Number(expenseAgg._sum.amount ?? 0);
@@ -107,7 +108,7 @@ export default async function DashboardPage() {
                     </TableCell>
                   </TableRow>
                 ) : (
-                  recent.map((t) => (
+                  recent.map((t: Transaction) => (
                     <TableRow key={t.id}>
                       <TableCell className="text-sm">{formatDateShort(t.date)}</TableCell>
                       <TableCell className="font-medium">{t.merchant}</TableCell>

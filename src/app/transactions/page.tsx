@@ -3,7 +3,7 @@ import { TransactionType } from "@prisma/client";
 
 import { deleteTransaction } from "@/app/transactions/actions";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -84,9 +84,9 @@ export default async function TransactionsPage({
             Search, filter, and manage your ledger.
           </p>
         </div>
-        <Button asChild>
-          <Link href="/transactions/new">Add transaction</Link>
-        </Button>
+        <Link href="/transactions/new" className={buttonVariants()}>
+          Add transaction
+        </Link>
       </div>
 
       <Card>
@@ -202,9 +202,12 @@ export default async function TransactionsPage({
                       </TableCell>
                       <TableCell className="text-right">
                         <div className="flex justify-end gap-2">
-                          <Button asChild size="sm" variant="secondary">
-                            <Link href={`/transactions/${t.id}/edit`}>Edit</Link>
-                          </Button>
+                          <Link
+                            href={`/transactions/${t.id}/edit`}
+                            className={buttonVariants({ size: "sm", variant: "secondary" })}
+                          >
+                            Edit
+                          </Link>
                           <form action={deleteTransaction.bind(null, t.id)}>
                             <Button size="sm" variant="destructive" type="submit">
                               Delete

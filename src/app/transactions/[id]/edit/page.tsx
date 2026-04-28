@@ -3,7 +3,7 @@ import { TransactionType } from "@prisma/client";
 import Link from "next/link";
 
 import { updateTransaction } from "@/app/transactions/actions";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -96,9 +96,12 @@ export default async function EditTransactionPage({
             </div>
 
             <div className="flex items-center justify-end gap-2 pt-2">
-              <Button asChild type="button" variant="secondary">
-                <Link href="/transactions">Cancel</Link>
-              </Button>
+              <Link
+                href="/transactions"
+                className={buttonVariants({ variant: "secondary" })}
+              >
+                Cancel
+              </Link>
               <Button type="submit">Save</Button>
             </div>
           </form>
