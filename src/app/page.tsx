@@ -1,65 +1,172 @@
-import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { prisma } from "@/lib/db";
+import { formatCurrency, formatDateShort } from "@/lib/format";
+
+export default async function DashboardPage() {
+  const [incomeAgg, expenseAgg, recent, byCategory] = await Promise.all([
+    prisma.transaction.aggregate({
+      where: { type: "INCOME" },
+      _sum: { amount: true },
+    }),
+    prisma.transaction.aggregate({
+      where: { type: "EXPENSE" },
+      _sum: { amount: true },
+    }),
+    prisma.transaction.findMany({
+      orderBy: [{ date: "desc" }, { createdAt: "desc" }],
+      take: 8,
+    }),
+    prisma.transaction.groupBy({
+      by: ["category"],
+      where: { type: "EXPENSE" },
+      _sum: { amount: true },
+      orderBy: { _sum: { amount: "desc" } },
+      take: 8,
+    }),
+  ]);
+
+  const totalIncome = Number(incomeAgg._sum.amount ?? 0);
+  const totalExpenses = Number(expenseAgg._sum.amount ?? 0);
+  const net = totalIncome - totalExpenses;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="grid gap-6">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tight">Dashboard</h1>
+          <p className="text-sm text-muted-foreground">
+            A simple, private ledger overview.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="flex gap-2">
+          <Button asChild variant="secondary">
+            <Link href="/transactions">View transactions</Link>
+          </Button>
+          <Button asChild>
+            <Link href="/transactions/new">Add</Link>
+          </Button>
         </div>
-      </main>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-3">
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-sm font-medium text-muted-foreground">Total income</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-semibold">{formatCurrency(totalIncome)}</div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-sm font-medium text-muted-foreground">Total expenses</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-semibold">{formatCurrency(totalExpenses)}</div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-sm font-medium text-muted-foreground">Net cash flow</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-semibold">{formatCurrency(net)}</div>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="grid gap-4 lg:grid-cols-2">
+        <Card>
+          <CardHeader className="pb-4">
+            <CardTitle className="text-base">Recent transactions</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[110px]">Date</TableHead>
+                  <TableHead>Merchant</TableHead>
+                  <TableHead>Category</TableHead>
+                  <TableHead className="text-right">Amount</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {recent.length === 0 ? (
+                  <TableRow>
+                    <TableCell colSpan={4} className="py-10 text-center text-sm text-muted-foreground">
+                      No transactions yet.
+                    </TableCell>
+                  </TableRow>
+                ) : (
+                  recent.map((t) => (
+                    <TableRow key={t.id}>
+                      <TableCell className="text-sm">{formatDateShort(t.date)}</TableCell>
+                      <TableCell className="font-medium">{t.merchant}</TableCell>
+                      <TableCell>
+                        <Badge variant="secondary">{t.category}</Badge>
+                      </TableCell>
+                      <TableCell className="text-right font-medium">
+                        {formatCurrency(Number(t.amount))}
+                      </TableCell>
+                    </TableRow>
+                  ))
+                )}
+              </TableBody>
+            </Table>
+
+            <Separator className="my-4" />
+            <div className="flex items-center justify-between">
+              <div className="text-sm text-muted-foreground">Manage your ledger</div>
+              <Button asChild size="sm" variant="secondary">
+                <Link href="/transactions">Open transactions</Link>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="pb-4">
+            <CardTitle className="text-base">Spending by category</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid gap-3">
+              {byCategory.length === 0 ? (
+                <div className="py-10 text-center text-sm text-muted-foreground">
+                  No expense data yet.
+                </div>
+              ) : (
+                byCategory.map((row) => {
+                  const value = Number(row._sum.amount ?? 0);
+                  return (
+                    <div key={row.category} className="flex items-center justify-between gap-4">
+                      <div className="min-w-0">
+                        <div className="truncate text-sm font-medium">{row.category}</div>
+                        <div className="text-xs text-muted-foreground">Expense</div>
+                      </div>
+                      <div className="text-sm font-semibold">{formatCurrency(value)}</div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      <Card>
+        <CardHeader className="pb-4">
+          <CardTitle className="text-base">V1 scope</CardTitle>
+        </CardHeader>
+        <CardContent className="text-sm text-muted-foreground">
+          Manual ledger + clean dashboard. No auth. No AI. All data stays local.
+        </CardContent>
+      </Card>
     </div>
   );
 }

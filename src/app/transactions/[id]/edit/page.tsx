@@ -20,9 +20,9 @@ function toDateInputValue(d: Date) {
 export default async function EditTransactionPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }) {
-  const { id } = await params;
+  const { id } = params;
   const t = await prisma.transaction.findUnique({ where: { id } });
   if (!t) notFound();
 
