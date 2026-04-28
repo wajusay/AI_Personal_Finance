@@ -83,4 +83,3 @@ Later (only when needed by the phase):
 - **Doesn’t leak data** off-machine by default
 - **Clear UX** (especially around imports, review queue, and AI suggestions)
 - **Data model is explicit** (Prisma schema is understandable and evolvable)
-
