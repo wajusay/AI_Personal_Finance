@@ -39,6 +39,9 @@ export default async function TransactionsPage({
   const from = typeof sp.from === "string" ? sp.from : "";
   const to = typeof sp.to === "string" ? sp.to : "";
 
+  const fromDate = toDateStart(from);
+  const toDate = toDateEnd(to);
+
   const categories = await prisma.transaction.findMany({
     select: { category: true },
     distinct: ["category"],
@@ -61,8 +64,8 @@ export default async function TransactionsPage({
       from || to
         ? {
             date: {
-              gte: toDateStart(from),
-              lte: toDateEnd(to),
+              ...(fromDate ? { gte: fromDate } : {}),
+              ...(toDate ? { lte: toDate } : {}),
             },
           }
         : {},
@@ -183,7 +186,6 @@ export default async function TransactionsPage({
               ) : (
                 transactions.map((t) => {
                   const amount = Number(t.amount);
-                  const isExpense = t.type === "EXPENSE";
                   return (
                     <TableRow key={t.id}>
                       <TableCell className="text-sm">{formatDateShort(t.date)}</TableCell>
@@ -199,9 +201,7 @@ export default async function TransactionsPage({
                       </TableCell>
                       <TableCell className="text-sm text-muted-foreground">{typeLabel(t.type)}</TableCell>
                       <TableCell className="text-right font-medium">
-                        <span className={isExpense ? "text-foreground" : "text-foreground"}>
-                          {formatCurrency(amount)}
-                        </span>
+                        {formatCurrency(amount)}
                       </TableCell>
                       <TableCell className="text-right">
                         <div className="flex justify-end gap-2">

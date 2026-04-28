@@ -31,6 +31,11 @@ Open `http://localhost:3000`.
 - No AI yet
 - SQLite DB is local (`prisma/dev.db`) and ignored by git
 
+### V2 (in progress)
+
+- CSV import with column mapping + preview + duplicate detection
+- Deterministic categorization rules (priority-based)
+
 ## Getting Started
 
 First, run the development server:
