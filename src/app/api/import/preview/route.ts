@@ -130,6 +130,7 @@ export async function POST(req: Request) {
     const matched = applyCategoryRules({ merchant, description, type, rules });
     const category = matched?.category ?? "Needs Review";
     const needsReview = !matched;
+    const confidenceScore = matched ? 0.9 : 0.2;
 
     normalized.push({
       rowIndex: i,
@@ -141,6 +142,7 @@ export async function POST(req: Request) {
       amount,
       category,
       needsReview,
+      confidenceScore,
       matchedRuleId: matched?.ruleId ?? null,
     });
   }

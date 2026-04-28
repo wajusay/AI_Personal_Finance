@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { TransactionType } from "@prisma/client";
+import { CategorizationSource, TransactionType } from "@prisma/client";
 import { z } from "zod";
 
 import { prisma } from "@/lib/db";
@@ -44,6 +44,10 @@ export async function createTransaction(formData: FormData) {
       type: parsed.data.type,
       category: parsed.data.category,
       needsReview: parsed.data.category.trim().toLowerCase() === "needs review",
+      confidenceScore: 1,
+      categorizationSource: CategorizationSource.MANUAL,
+      reviewedAt:
+        parsed.data.category.trim().toLowerCase() === "needs review" ? null : new Date(),
       accountName: parsed.data.accountName,
       notes: parsed.data.notes || null,
     },
@@ -80,6 +84,10 @@ export async function updateTransaction(id: string, formData: FormData) {
       type: parsed.data.type,
       category: parsed.data.category,
       needsReview: parsed.data.category.trim().toLowerCase() === "needs review",
+      confidenceScore: 1,
+      categorizationSource: CategorizationSource.MANUAL,
+      reviewedAt:
+        parsed.data.category.trim().toLowerCase() === "needs review" ? null : new Date(),
       accountName: parsed.data.accountName,
       notes: parsed.data.notes || null,
     },

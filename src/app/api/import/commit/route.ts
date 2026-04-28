@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { TransactionType } from "@prisma/client";
+import { CategorizationSource, TransactionType } from "@prisma/client";
 import { z } from "zod";
 
 import { prisma } from "@/lib/db";
@@ -115,6 +115,8 @@ export async function POST(req: Request) {
       amount,
       category: matched?.category ?? "Needs Review",
       needsReview: !matched,
+      confidenceScore: matched ? 0.9 : 0.2,
+      categorizationSource: matched ? CategorizationSource.RULE : CategorizationSource.IMPORT,
     });
   }
 
@@ -161,6 +163,9 @@ export async function POST(req: Request) {
           type: t.type,
           category: t.category,
           needsReview: t.needsReview,
+          confidenceScore: t.confidenceScore,
+          categorizationSource: t.categorizationSource,
+          reviewedAt: null,
           accountName: t.accountName,
         },
       }),

@@ -15,6 +15,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <nav className="hidden items-center gap-4 sm:flex">
               <NavLink href="/">Dashboard</NavLink>
               <NavLink href="/transactions">Transactions</NavLink>
+              <NavLink href="/review">Action Required</NavLink>
               <NavLink href="/import">Import</NavLink>
               <NavLink href="/rules">Rules</NavLink>
             </nav>
