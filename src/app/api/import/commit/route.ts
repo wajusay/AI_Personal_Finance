@@ -4,6 +4,8 @@ import { z } from "zod";
 
 import { prisma } from "@/lib/db";
 import { applyCategoryRules } from "@/lib/rules";
+import { categorizeWithOllama } from "@/lib/ollama";
+import { getAppSettings } from "@/lib/settings";
 
 const mappingSchema = z.object({
   date: z.string().min(1),
@@ -68,6 +70,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
 
+  const settings = await getAppSettings();
+
   const limit = parsed.data.limit ?? 5000;
   const rows = parsed.data.rows.slice(0, limit);
   const mapping = parsed.data.mapping;
@@ -76,8 +80,15 @@ export async function POST(req: Request) {
     orderBy: [{ priority: "desc" }, { createdAt: "asc" }],
   });
 
+  const existingCategories = await prisma.transaction.findMany({
+    select: { category: true },
+    distinct: ["category"],
+    orderBy: { category: "asc" },
+  });
+
   const normalized = [];
   const errors: Array<{ rowIndex: number; message: string }> = [];
+  const aiErrors: Array<{ rowIndex: number; message: string }> = [];
 
   for (let i = 0; i < rows.length; i++) {
     const r = rows[i] ?? {};
@@ -106,6 +117,48 @@ export async function POST(req: Request) {
     const amount = Math.abs(signedAmount);
     const matched = applyCategoryRules({ merchant, description, type, rules });
 
+    let category = matched?.category ?? "Needs Review";
+    let needsReview = !matched;
+    let confidenceScore = matched ? 0.9 : 0.2;
+    let categorizationSource: CategorizationSource = matched
+      ? CategorizationSource.RULE
+      : CategorizationSource.IMPORT;
+    let aiSuggestedCategory: string | null = null;
+    let aiReasoning: string | null = null;
+
+    if (settings.aiEnabled && !matched) {
+      const ai = await categorizeWithOllama({
+        merchant,
+        description,
+        amount,
+        accountName,
+        existingCategories: existingCategories.map((c) => c.category),
+        model: settings.ollamaModel,
+      });
+
+      if (ai.ok) {
+        aiSuggestedCategory = ai.result.suggestedCategory;
+        aiReasoning = ai.result.reasoning;
+        confidenceScore = ai.result.confidence;
+
+        if (ai.result.confidence >= settings.aiConfidenceThreshold) {
+          category = ai.result.suggestedCategory;
+          needsReview = false;
+          categorizationSource = CategorizationSource.AI;
+        } else {
+          category = "Needs Review";
+          needsReview = true;
+          categorizationSource = CategorizationSource.IMPORT;
+        }
+      } else {
+        aiErrors.push({ rowIndex: i, message: ai.error });
+        category = "Needs Review";
+        needsReview = true;
+        confidenceScore = 0.2;
+        categorizationSource = CategorizationSource.IMPORT;
+      }
+    }
+
     normalized.push({
       date,
       merchant,
@@ -113,10 +166,12 @@ export async function POST(req: Request) {
       accountName,
       type,
       amount,
-      category: matched?.category ?? "Needs Review",
-      needsReview: !matched,
-      confidenceScore: matched ? 0.9 : 0.2,
-      categorizationSource: matched ? CategorizationSource.RULE : CategorizationSource.IMPORT,
+      category,
+      needsReview,
+      confidenceScore,
+      categorizationSource,
+      aiSuggestedCategory,
+      aiReasoning,
     });
   }
 
@@ -165,6 +220,8 @@ export async function POST(req: Request) {
           needsReview: t.needsReview,
           confidenceScore: t.confidenceScore,
           categorizationSource: t.categorizationSource,
+          aiSuggestedCategory: t.aiSuggestedCategory,
+          aiReasoning: t.aiReasoning,
           reviewedAt: null,
           accountName: t.accountName,
         },
@@ -180,7 +237,7 @@ export async function POST(req: Request) {
       created: created.length,
       skippedDuplicates: normalized.length - created.length,
     },
-    errors,
+    errors: [...errors, ...aiErrors],
   });
 }
 

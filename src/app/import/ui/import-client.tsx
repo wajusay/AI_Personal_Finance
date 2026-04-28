@@ -29,6 +29,10 @@ type PreviewRow = {
   category: string;
   needsReview: boolean;
   duplicate: boolean;
+  confidenceScore?: number | null;
+  aiSuggestedCategory?: string | null;
+  aiReasoning?: string | null;
+  aiError?: string | null;
 };
 
 type PreviewResponse = {
@@ -260,7 +264,7 @@ export default function ImportClient({ ruleCount }: { ruleCount: number }) {
                   <TableHead className="hidden md:table-cell">Description</TableHead>
                   <TableHead className="hidden lg:table-cell">Account</TableHead>
                   <TableHead>Category</TableHead>
-                  <TableHead>Flags</TableHead>
+                  <TableHead>Signals</TableHead>
                   <TableHead className="text-right">Amount</TableHead>
                 </TableRow>
               </TableHeader>
@@ -282,7 +286,16 @@ export default function ImportClient({ ruleCount }: { ruleCount: number }) {
                       <div className="flex flex-wrap gap-1">
                         {t.duplicate && <Badge variant="destructive">Duplicate</Badge>}
                         {!t.duplicate && t.needsReview && <Badge variant="secondary">Needs Review</Badge>}
-                        {!t.duplicate && !t.needsReview && <Badge variant="secondary">Rule</Badge>}
+                        {!t.duplicate && !t.needsReview && <Badge variant="secondary">Auto</Badge>}
+                        {typeof t.confidenceScore === "number" && (
+                          <Badge variant="secondary">
+                            {Math.round(t.confidenceScore * 100)}%
+                          </Badge>
+                        )}
+                        {t.aiSuggestedCategory && (
+                          <Badge variant="secondary">AI: {t.aiSuggestedCategory}</Badge>
+                        )}
+                        {t.aiError && <Badge variant="destructive">AI error</Badge>}
                       </div>
                     </TableCell>
                     <TableCell className="text-right font-medium">

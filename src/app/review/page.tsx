@@ -89,10 +89,17 @@ export default async function ReviewQueuePage() {
               ) : (
                 txs.map((t) => {
                   const suggested = suggestionMap.get(t.id);
+                  const aiSuggested =
+                    t.aiSuggestedCategory && t.aiSuggestedCategory.trim().length > 0
+                      ? { category: t.aiSuggestedCategory, confidence: t.confidenceScore ?? null }
+                      : null;
                   const confidence =
-                    t.confidenceScore ?? (suggested ? suggested.confidence : null);
+                    t.confidenceScore ??
+                    (aiSuggested?.confidence ?? (suggested ? suggested.confidence : null));
                   const approveCategory =
-                    t.category !== "Needs Review" ? t.category : suggested?.category ?? "";
+                    t.category !== "Needs Review"
+                      ? t.category
+                      : aiSuggested?.category ?? suggested?.category ?? "";
                   const canApprove = approveCategory.trim().length > 0 && approveCategory !== "Needs Review";
                   return (
                     <TableRow key={t.id}>
@@ -103,7 +110,15 @@ export default async function ReviewQueuePage() {
                       </TableCell>
                       <TableCell className="font-medium">{formatCurrency(Number(t.amount))}</TableCell>
                       <TableCell>
-                        {suggested ? (
+                        {aiSuggested ? (
+                          <div className="grid gap-1">
+                            <Badge variant="secondary">{aiSuggested.category}</Badge>
+                            <div className="text-xs text-muted-foreground">
+                              AI: {t.aiReasoning ? t.aiReasoning : "—"} • Confidence:{" "}
+                              {Math.round((confidence ?? 0) * 100)}%
+                            </div>
+                          </div>
+                        ) : suggested ? (
                           <div className="grid gap-1">
                             <Badge variant="secondary">{suggested.category}</Badge>
                             <div className="text-xs text-muted-foreground">
@@ -145,7 +160,7 @@ export default async function ReviewQueuePage() {
                                 <Input
                                   id={`category-${t.id}`}
                                   name="category"
-                                  defaultValue={suggested?.category ?? ""}
+                                  defaultValue={aiSuggested?.category ?? suggested?.category ?? ""}
                                   placeholder="e.g. Groceries"
                                   required
                                 />

@@ -34,6 +34,8 @@ model Transaction {
   needsReview Boolean         @default(true)
   confidenceScore Float?
   categorizationSource CategorizationSource @default(IMPORT)
+  aiSuggestedCategory String?
+  aiReasoning String?
   reviewedAt   DateTime?
   accountName String
   notes       String?
@@ -58,4 +60,15 @@ model CategoryRule {
 
   @@index([priority])
   @@index([transactionType])
+}
+
+model AppSettings {
+  id String @id @default("singleton")
+
+  aiEnabled Boolean @default(false)
+  ollamaModel String @default("llama3.2")
+  aiConfidenceThreshold Float @default(0.85)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
