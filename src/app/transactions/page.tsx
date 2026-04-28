@@ -142,9 +142,12 @@ export default async function TransactionsPage({
 
             <div className="flex items-end gap-2 md:col-span-2">
               <Button type="submit">Apply</Button>
-              <Button asChild type="button" variant="secondary">
-                <Link href="/transactions">Reset</Link>
-              </Button>
+              <Link
+                href="/transactions"
+                className={buttonVariants({ variant: "secondary" })}
+              >
+                Reset
+              </Link>
             </div>
           </form>
         </CardContent>
