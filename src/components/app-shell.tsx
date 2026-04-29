@@ -16,6 +16,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <NavLink href="/">Dashboard</NavLink>
               <NavLink href="/transactions">Transactions</NavLink>
               <NavLink href="/review">Action Required</NavLink>
+              <NavLink href="/alerts">Alerts</NavLink>
+              <NavLink href="/forecast">Forecast</NavLink>
               <NavLink href="/import">Import</NavLink>
               <NavLink href="/statements/new">Statements</NavLink>
               <NavLink href="/entities">Entities</NavLink>
