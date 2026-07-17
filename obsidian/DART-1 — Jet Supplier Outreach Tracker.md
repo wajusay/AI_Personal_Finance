@@ -27,8 +27,8 @@ status: active
 | **PBS Aerospace** | TJ40-G2 / custom | ~400+ N | 🔒 NDA in legal review | **Theirs** | 2026-07-17 | PBS (Frank Jones) |
 | **AMT Netherlands** | Orion | ~600 N | 📄 Tech info received | **Mine** | 2026-07-13 | AMT (Bennie van de Goor) |
 | **KingTech** | K450G4+ | ~450 N | 📄 Data packet received | **Mine** | 2026-07-16 | KingTech (Jack) |
-| **JetCat** | P550-PRO-GH | ~550 N | 📤 No reply yet | **Theirs** | 2026-07-14 | Me (2nd nudge) |
-| **Jet Italia** | Tanus 500N | ~500 N | 📤 No reply yet | **Theirs** | 2026-07-14 | Me (2nd nudge) |
+| **JetCat** | P550-PRO-GH | ~550 N | 📤 No reply yet (3rd nudge drafted) | **Theirs** | 2026-07-14 | Me (2nd nudge) |
+| **Jet Italia** | Tanus 500N | ~500 N | 📤 No reply yet (nudged via WhatsApp) | **Theirs** | 2026-07-17 | Me (WhatsApp) |
 
 **Legend:** 🎾 *Mine* = I owe the next move · *Theirs* = waiting on supplier.
 
@@ -39,8 +39,8 @@ status: active
 - [ ] **KingTech** — Review the K450G4+ data packet Jack sent **2026-07-16** against the design point (61 kPa / 282 K, installed mass vs MTOW, two-flight/restart). Note his caveat: significant thrust loss in cold/thin air.
 - [ ] **AMT Orion** — Get Michael's steer (forwarded 2026-07-16) on the **Q1-2027 production timeline** risk, then reply to Bennie. Engine is right-class and tech info is in hand, but it is **not yet in production**.
 - [ ] **PBS** — Stand by for PBS legal on the redlined NDA; be ready to counter-sign quickly so technical data can flow.
-- [ ] **JetCat** — If still silent by ~2026-07-21, send a 3rd touch or call.
-- [ ] **Jet Italia** — If still silent by ~2026-07-21, send a 3rd touch or call.
+- [ ] **JetCat** — 3rd-touch follow-up email drafted 2026-07-17 (asks: can you share data? NDA needed? better contact?). Send it; if still silent by ~2026-07-24, call.
+- [ ] **Jet Italia** — Nudged via WhatsApp 2026-07-17; email follow-up drafted the same day. Send the email too; if silent on both by ~2026-07-24, try a call.
 
 ---
 
@@ -89,14 +89,17 @@ status: active
 - **Timeline**
     - 2026-07-10 — 📤 Me: engineering data request (P550-PRO-GH)
     - 2026-07-14 — 📤 Me: follow-up / confirm receipt
+    - 2026-07-17 — ✍️ Me: 3rd-touch follow-up email drafted (pending send)
 
 ### 📤 Jet Italia — Tanus 500N
 - **Ball:** Theirs (no reply) · **Stage:** Awaiting first response · **Last contact:** 2026-07-14 (me)
 - **Contacts:** `info@jet-italia.it`
-- **Read:** Two touches, no response. Not yet engaged.
+- **Read:** No email response after two touches; now also nudged over WhatsApp to reach them on a second channel. Not yet engaged.
 - **Timeline**
     - 2026-07-10 — 📤 Me: engineering evaluation request (Tanus 500N)
-    - 2026-07-14 — 📤 Me: follow-up / confirm receipt
+    - 2026-07-14 — 📤 Me: follow-up / confirm receipt (email)
+    - 2026-07-17 — 📱 Me: follow-up sent via **WhatsApp**
+    - 2026-07-17 — ✍️ Me: 3rd-touch follow-up email drafted (pending send)
 
 ---
 
