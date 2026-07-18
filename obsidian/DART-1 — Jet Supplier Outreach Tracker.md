@@ -16,7 +16,7 @@ status: active
 > [!info] What this tracks
 > Every turbojet-engine supplier contacted by email for **DART-1** propulsion sourcing, whose turn it is to act, and when contact last happened.
 > **Design point driving every inquiry:** ~30,000 ft / Mach 1.08 → engine-face **~61 kPa / ~282 K**, strict MTOW (~18 kg vehicle), **two flights same day** on one engine with a restart between.
-> **Last refreshed:** 2026-07-17 · **Suppliers tracked:** 5 · **Ball in my court:** 2 · **Ball with supplier:** 3
+> **Last refreshed:** 2026-07-18 · **Suppliers tracked:** 6 · **Ball in my court:** 3 · **Ball with supplier:** 3
 
 ---
 
@@ -29,6 +29,7 @@ status: active
 | **KingTech** | K450G4+ | ~450 N | 📄 Data packet received | **Mine** | 2026-07-16 | KingTech (Jack) |
 | **JetCat** | P550-PRO-GH | ~550 N | 📤 No reply yet (3rd nudge drafted) | **Theirs** | 2026-07-14 | Me (2nd nudge) |
 | **Jet Italia** | Tanus 500N | ~500 N | 📤 No reply yet (nudged via WhatsApp) | **Theirs** | 2026-07-17 | Me (WhatsApp) |
+| **TDI / Kratos** | TDI-J70 | ~560 N | 📄 Specs received; NDA required | **Mine** | 2026-07-18 | TDI (Kevin O'Brien) |
 
 **Legend:** 🎾 *Mine* = I owe the next move · *Theirs* = waiting on supplier.
 
@@ -41,6 +42,7 @@ status: active
 - [ ] **PBS** — Stand by for PBS legal on the redlined NDA; be ready to counter-sign quickly so technical data can flow.
 - [ ] **JetCat** — 3rd-touch follow-up email drafted 2026-07-17 (asks: can you share data? NDA needed? better contact?). Send it; if still silent by ~2026-07-24, call.
 - [ ] **Jet Italia** — Nudged via WhatsApp 2026-07-17; email follow-up drafted the same day. Send the email too; if silent on both by ~2026-07-24, try a call.
+- [ ] **TDI / Kratos** — Kevin sent specs 2026-07-18; needs an **NDA** before a firm quote. Decide go/no-go on the trade-offs (~$100k/engine, ~Jan-2027 delivery, ITAR), then — via Michael per the external-contact rule — return the NDA intake fields (legal name, citizenship, address, state of incorp, entity form, signer). Confirm **full installed mass** vs the ~18 kg MTOW.
 
 ---
 
@@ -101,6 +103,21 @@ status: active
     - 2026-07-17 — 📱 Me: follow-up sent via **WhatsApp**
     - 2026-07-17 — ✍️ Me: 3rd-touch follow-up email drafted (pending send)
 
+### 📄 TDI / Kratos — TDI-J70 (Technical Directions Inc.)
+- **Ball:** Mine (NDA intake + go/no-go) · **Stage:** Specs received, NDA required before quote · **Last contact:** 2026-07-18 (them)
+- **Contacts:** Kevin O'Brien, Director Strategy & Business Development — `kevin.obrien@kratosdefense.com`, +1 (661) 501-3340 · Kratos Unmanned Systems Division (USA)
+- **Read:** Most complete data response so far — a serious defense-grade vendor (TDI is a wholly owned Kratos subsidiary, UAS/missile propulsion, 30–200 lbf class). But three real trade-offs: **~$100k/engine ROM**, **~180-day lead (deliveries ~Jan 2027)**, and **ITAR/export-controlled** (US State Dept marketing license + TAA). The **J70** (~560 N) is the size fit. ⚠️ Its uninstalled mass is a large fraction of the ~18 kg vehicle MTOW; installed mass must be checked hard against the weight budget (figures in local-only copy).
+- **⚠️ Handling:** Spec sheets are **TDI Proprietary / ITAR-controlled** — Kevin's email prohibits forwarding/reproducing outside authorized parties. The full engine spec matrix is **held locally only** (not committed to this repo) per that notice — see the local-only copy of this tracker / the original PDF.
+- **Timeline**
+    - 2026-07-17 — 📤 Me: inquiry via Kratos contact form (J70; design point 61 kPa / 282 K; ITAR + single-unit-sale questions)
+    - 2026-07-18 — 📥 TDI (Kevin O'Brien): sent spec sheets (J45/J50/J70/J85 + J110 in dev); NDA required before firm quote; J70 ~$100k, ~Jan-2027 delivery; requested NDA intake info; proposed discovery telecon after NDA
+
+---
+
+## 🔧 TDI (Kratos) engine spec reference
+> [!warning] Held locally — not committed
+> The TDI engine spec matrix (J45 / J50 / J70 / J85 / J110) is **TDI Proprietary / ITAR-controlled** and is intentionally **kept out of this repo**. It lives in the local-only copy of this tracker and the original `TDI-Engine Spec Sheets.pdf`. **Commercial summary (shared with team):** J70 is the size fit (~560 N); NDA required before firm quote → discovery telecon; ~180-day lead, deliveries ~Jan 2027; ~$100k/engine ROM; ITAR (US State Dept marketing license + TAA).
+
 ---
 
 ## 🧮 Dataview (optional — needs the Dataview plugin)
@@ -116,6 +133,6 @@ SORT last-contact DESC
 ---
 
 ## 🔄 Keeping this "real time"
-This page is a snapshot generated from Gmail on **2026-07-17**. To keep it live I can arm a **recurring refresh** (e.g. a daily/weekday scheduled run) that re-scans the turbojet threads, recomputes ball-in-court + last-contact, and pushes an updated version of this file. Say the word and I'll schedule it.
+This page is a snapshot generated from Gmail on **2026-07-18**. To keep it live I can arm a **recurring refresh** (e.g. a daily/weekday scheduled run) that re-scans the turbojet threads, recomputes ball-in-court + last-contact, and pushes an updated version of this file. Say the word and I'll schedule it.
 
 *Not tracked here (different meaning of "jet"):* private-jet charter brokers (Apollo Jets, Air Charter Service, Fly Alliance, Fly Thrive, etc.) — those are travel-booking threads, not DART-1 propulsion suppliers. Tell me if you want a separate charter tracker.
