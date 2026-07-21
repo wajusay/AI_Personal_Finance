@@ -6,7 +6,7 @@ project: DART-1 (Mach 1 RC record attempt)
 program-lead: Jonas Jusay
 sponsor: Michael Mente (external contacts + spend >$1k route through sponsor)
 created: 2026-07-10
-updated: 2026-07-17
+updated: 2026-07-21
 source: Gmail (jonas.jusay@gmail.com)
 status: active
 ---
@@ -16,7 +16,7 @@ status: active
 > [!info] What this tracks
 > Every turbojet-engine supplier contacted by email for **DART-1** propulsion sourcing, whose turn it is to act, and when contact last happened.
 > **Design point driving every inquiry:** ~30,000 ft / Mach 1.08 → engine-face **~61 kPa / ~282 K**, strict MTOW (~18 kg vehicle), **two flights same day** on one engine with a restart between.
-> **Last refreshed:** 2026-07-18 · **Suppliers tracked:** 6 · **Ball in my court:** 3 · **Ball with supplier:** 3
+> **Last refreshed:** 2026-07-21 · **Suppliers tracked:** 18 (6 core + 12 expansion) · **Ball in my court:** 3 · **Ball with supplier:** 15
 
 ---
 
@@ -25,11 +25,11 @@ status: active
 | Supplier | Engine | Class | Stage | 🎾 Ball | Last contact | Who spoke last |
 |---|---|---|---|---|---|---|
 | **PBS Aerospace** | TJ40-G2 / custom | ~400+ N | 🔒 NDA in legal review | **Theirs** | 2026-07-17 | PBS (Frank Jones) |
-| **AMT Netherlands** | Orion | ~600 N | 📄 Tech info received | **Mine** | 2026-07-13 | AMT (Bennie van de Goor) |
+| **AMT Netherlands** | Orion + Titan | ~600 / ~392 N | 📄 Partial answers received | **Mine** | 2026-07-20 | AMT (Bennie van de Goor) |
 | **KingTech** | K450G4+ | ~450 N | 📄 Data packet received | **Mine** | 2026-07-16 | KingTech (Jack) |
-| **JetCat** | P550-PRO-GH | ~550 N | 📤 No reply yet (3rd nudge drafted) | **Theirs** | 2026-07-14 | Me (2nd nudge) |
-| **Jet Italia** | Tanus 500N | ~500 N | 📤 No reply yet (nudged via WhatsApp) | **Theirs** | 2026-07-17 | Me (WhatsApp) |
-| **TDI / Kratos** | TDI-J70 | ~560 N | 📄 Specs received; NDA required | **Mine** | 2026-07-18 | TDI (Kevin O'Brien) |
+| **JetCat** | P550-PRO-GH | ~550 N | 📤 No reply — 3rd follow-up sent | **Theirs** | 2026-07-17 | Me (3rd nudge) |
+| **Jet Italia** | Tanus 500N | ~500 N | 📤 No reply — email + WhatsApp sent | **Theirs** | 2026-07-17 | Me (WhatsApp) |
+| **TDI / Kratos** | TDI-J70 | ~560 N | 🔒 NDA intake returned; awaiting NDA/quote | **Theirs** | 2026-07-20 | Me (intake to Kevin) |
 
 **Legend:** 🎾 *Mine* = I owe the next move · *Theirs* = waiting on supplier.
 
@@ -38,11 +38,12 @@ status: active
 ## ✅ Next actions (my court)
 
 - [ ] **KingTech** — Review the K450G4+ data packet Jack sent **2026-07-16** against the design point (61 kPa / 282 K, installed mass vs MTOW, two-flight/restart). Note his caveat: significant thrust loss in cold/thin air.
-- [ ] **AMT Orion** — Get Michael's steer (forwarded 2026-07-16) on the **Q1-2027 production timeline** risk, then reply to Bennie. Engine is right-class and tech info is in hand, but it is **not yet in production**.
+- [ ] **AMT (Titan/Orion)** — Bennie sent **partial answers 2026-07-20**; review and reply on the still-open items (Titan 8,000 m ceiling hard-vs-tested, altitude thrust/fuel). Orion remains a Q1-2027 availability risk.
 - [ ] **PBS** — Stand by for PBS legal on the redlined NDA; be ready to counter-sign quickly so technical data can flow.
-- [ ] **JetCat** — 3rd-touch follow-up email drafted 2026-07-17 (asks: can you share data? NDA needed? better contact?). Send it; if still silent by ~2026-07-24, call.
-- [ ] **Jet Italia** — Nudged via WhatsApp 2026-07-17; email follow-up drafted the same day. Send the email too; if silent on both by ~2026-07-24, try a call.
-- [ ] **TDI / Kratos** — Kevin sent specs 2026-07-18; needs an **NDA** before a firm quote. Decide go/no-go on the trade-offs (~$100k/engine, ~Jan-2027 delivery, ITAR), then — via Michael per the external-contact rule — return the NDA intake fields (legal name, citizenship, address, state of incorp, entity form, signer). Confirm **full installed mass** vs the ~18 kg MTOW.
+- [ ] **TDI / Kratos** — NDA intake returned to Kevin **2026-07-20**; awaiting NDA + firm quote. Go/no-go still open on ~$100k/engine, ~Jan-2027, ITAR.
+- [ ] **Hongbo (JT-1000N)** — Email **bounced 2026-07-21** (`Kevin@hongboturbo.com` not found). Reach via WhatsApp **+86 18242549666** or the hongboturbo.net web form.
+- [ ] **JetCat / Jet Italia** — 3rd follow-ups sent 2026-07-17 (Jet Italia also WhatsApp); call if still silent by ~2026-07-24.
+- [ ] **Expansion batch (11 delivered 2026-07-21)** — awaiting first replies; follow up any silent by ~2026-07-28.
 
 ---
 
@@ -64,13 +65,15 @@ status: active
     - 2026-07-17 — 📥 PBS: "Sent the marked-up NDA to PBS legal yesterday"
 
 ### 📄 AMT Netherlands — Orion (~600 N)
-- **Ball:** Mine (reply to Bennie; pending Michael's steer) · **Stage:** Tech info received, availability risk · **Last contact from AMT:** 2026-07-13
+- **Ball:** Mine (answer/re-ask open items) · **Stage:** Partial answers received (Titan + Orion) · **Last contact from AMT:** 2026-07-20
 - **Contacts:** `email@amtjets.com` · Bennie van de Goor, **CEO**, AMT Netherlands
 - **Read:** Technically promising — right thrust class, CEO engaged, technical info shared. **Risk:** Orion prototype is finished but **not in production; planned Q1 2027** — likely too late depending on our schedule.
 - **Timeline**
     - 2026-07-10 — 📤 Me: preliminary inquiry (500–600 N class, incl. Orion)
     - 2026-07-13 — 📥 AMT: Orion prototype done, not in production, target Q1 2027; attached technical info
-    - 2026-07-16 — 🔁 Me: forwarded thread to Michael (sponsor) for guidance — *no reply to Bennie sent yet*
+    - 2026-07-16 — 🔁 Me: forwarded thread to Michael (sponsor) for guidance
+    - 2026-07-18 — 📤 Me: replied to Bennie — Titan follow-up (contact corrected to Bennie.vandeGoor@amtjets.com)
+    - 2026-07-20 — 📥 AMT: **partial** answers returned (Titan 8,000 m ceiling hard-vs-tested + altitude thrust/fuel still open)
 
 ### 📄 KingTech — K450G4+
 - **Ball:** Mine (review the data) · **Stage:** Data packet received · **Last contact:** 2026-07-16 (them)
@@ -104,13 +107,36 @@ status: active
     - 2026-07-17 — ✍️ Me: 3rd-touch follow-up email drafted (pending send)
 
 ### 📄 TDI / Kratos — TDI-J70 (Technical Directions Inc.)
-- **Ball:** Mine (NDA intake + go/no-go) · **Stage:** Specs received, NDA required before quote · **Last contact:** 2026-07-18 (them)
+- **Ball:** Theirs (NDA + quote) · **Stage:** NDA intake returned; awaiting NDA/quote · **Last contact:** 2026-07-20 (me)
 - **Contacts:** Kevin O'Brien, Director Strategy & Business Development — `kevin.obrien@kratosdefense.com`, +1 (661) 501-3340 · Kratos Unmanned Systems Division (USA)
 - **Read:** Most complete data response so far — a serious defense-grade vendor (TDI is a wholly owned Kratos subsidiary, UAS/missile propulsion, 30–200 lbf class). But three real trade-offs: **~$100k/engine ROM**, **~180-day lead (deliveries ~Jan 2027)**, and **ITAR/export-controlled** (US State Dept marketing license + TAA). The **J70** (~560 N) is the size fit. ⚠️ Its uninstalled mass is a large fraction of the ~18 kg vehicle MTOW; installed mass must be checked hard against the weight budget (figures in local-only copy).
 - **⚠️ Handling:** Spec sheets are **TDI Proprietary / ITAR-controlled** — Kevin's email prohibits forwarding/reproducing outside authorized parties. The full engine spec matrix is **held locally only** (not committed to this repo) per that notice — see the local-only copy of this tracker / the original PDF.
 - **Timeline**
     - 2026-07-17 — 📤 Me: inquiry via Kratos contact form (J70; design point 61 kPa / 282 K; ITAR + single-unit-sale questions)
     - 2026-07-18 — 📥 TDI (Kevin O'Brien): sent spec sheets (J45/J50/J70/J85 + J110 in dev); NDA required before firm quote; J70 ~$100k, ~Jan-2027 delivery; requested NDA intake info; proposed discovery telecon after NDA
+    - 2026-07-20 — 📤 Me: returned NDA intake information to Kevin (ball now with TDI)
+
+---
+
+## 🌐 Expanded outreach — additional manufacturers (batch sent 2026-07-21)
+Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400–1,000 N class. Each email requested only the **gaps** not in the vendor's public data (altitude/engine-face thrust & fuel, hard-vs-support limits, full installed mass, two-flight restart/TBO, nozzle, price/lead, export status).
+
+| Supplier | Engine(s) | Country | Recipient | Sent | 🎾 Ball | Notes |
+|---|---|---|---|---|---|---|
+| **GFA Aviation** | LF90 / Leiting 90 | China | market@bjgfa.com | 2026-07-21 | Theirs | awaiting reply |
+| **ZofiTech** | ZT J60 / J80 / J160 | Czechia | info@zofitech.com | 2026-07-21 | Theirs | awaiting reply |
+| **Van der Lee Turbo Systems** | custom ~900 N | Netherlands | info@vdlee.com | 2026-07-21 | Theirs | custom-design inquiry |
+| **CSIR-NAL** | NJ-100 (~1,000 N) | India | rvenkatesh@nal.res.in | 2026-07-21 | Theirs | govt lab — collaboration/eval path, not off-the-shelf |
+| **Fong Jaw Aerospace** | FJ-100 / FJ-1200 | Taiwan | sales@fong-jaw.com | 2026-07-21 | Theirs | asked to confirm complete engine; claims ~Mach 0.95 cruise |
+| **Frank Turbine** | FT400+ / FT450 / FT500 | Austria | mario@frankturbine.com | 2026-07-21 | Theirs | line spans ~38–150 kg thrust |
+| **NEX Power** | 800 N turbojet | UK | info@nex-power.co.uk (+ web form) | 2026-07-21 | Theirs | little public data; also submitting web-portal inquiry |
+| **DG Propulsion** | DG J100 (~100 kgf) | India | info@dgpropulsion.com; civilian@ | 2026-07-21 | Theirs | domain corrected (no hyphen) |
+| **Jets Munt** | M250XBL / XM250NG | Spain | info@jets-munt.com | 2026-07-21 | Theirs | ~250 N — below target class |
+| **SWIWIN** | SW800Pro-Y / SW400Pro-K | China | sales@swiwin.com | 2026-07-21 | Theirs | ~800 / ~400 N; publishes full SLS specs |
+| **Rotorsan** | RTJ-900 / RTJ-900 PRO | Türkiye | info@rotorsan.com | 2026-07-21 | Theirs | no public specs found |
+| **Hongbo Turbo** | JT-1000N (~1,000 N) | China | Kevin@hongboturbo.com | 2026-07-21 | **Mine** | ⚠️ **BOUNCED** (address not found) — reaching via WhatsApp +86 18242549666 / hongboturbo.net web form |
+
+**Batch status:** 11 delivered (awaiting first replies), 1 bounced (Hongbo → retry via web form). Kratos/TDI **excluded** (already in active NDA-intake dialogue).
 
 ---
 
@@ -133,6 +159,6 @@ SORT last-contact DESC
 ---
 
 ## 🔄 Keeping this "real time"
-This page is a snapshot generated from Gmail on **2026-07-18**. To keep it live I can arm a **recurring refresh** (e.g. a daily/weekday scheduled run) that re-scans the turbojet threads, recomputes ball-in-court + last-contact, and pushes an updated version of this file. Say the word and I'll schedule it.
+This page is a snapshot generated from Gmail on **2026-07-21**. To keep it live I can arm a **recurring refresh** (e.g. a daily/weekday scheduled run) that re-scans the turbojet threads, recomputes ball-in-court + last-contact, and pushes an updated version of this file. Say the word and I'll schedule it.
 
 *Not tracked here (different meaning of "jet"):* private-jet charter brokers (Apollo Jets, Air Charter Service, Fly Alliance, Fly Thrive, etc.) — those are travel-booking threads, not DART-1 propulsion suppliers. Tell me if you want a separate charter tracker.
