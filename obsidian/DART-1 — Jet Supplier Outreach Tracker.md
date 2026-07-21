@@ -16,7 +16,7 @@ status: active
 > [!info] What this tracks
 > Every turbojet-engine supplier contacted by email for **DART-1** propulsion sourcing, whose turn it is to act, and when contact last happened.
 > **Design point driving every inquiry:** ~30,000 ft / Mach 1.08 → engine-face **~61 kPa / ~282 K**, strict MTOW (~18 kg vehicle), **two flights same day** on one engine with a restart between.
-> **Last refreshed:** 2026-07-21 · **Suppliers tracked:** 18 (6 core + 12 expansion) · **Ball in my court:** 3 · **Ball with supplier:** 15
+> **Last refreshed:** 2026-07-21 · **Suppliers tracked:** 18 (6 core + 12 expansion) · **Ball in my court:** 2 · **Ball with supplier:** 16
 
 ---
 
@@ -41,7 +41,7 @@ status: active
 - [ ] **AMT (Titan/Orion)** — Bennie sent **partial answers 2026-07-20**; review and reply on the still-open items (Titan 8,000 m ceiling hard-vs-tested, altitude thrust/fuel). Orion remains a Q1-2027 availability risk.
 - [ ] **PBS** — Stand by for PBS legal on the redlined NDA; be ready to counter-sign quickly so technical data can flow.
 - [ ] **TDI / Kratos** — NDA intake returned to Kevin **2026-07-20**; awaiting NDA + firm quote. Go/no-go still open on ~$100k/engine, ~Jan-2027, ITAR.
-- [ ] **Hongbo (JT-1000N)** — Email **bounced 2026-07-21** (`Kevin@hongboturbo.com` not found). Reach via WhatsApp **+86 18242549666** or the hongboturbo.net web form.
+- [ ] **Hongbo (JT-1000N)** — Email bounced; **web-form inquiry submitted 2026-07-21**. Awaiting reply; WhatsApp **+86 18242549666** as backup if silent.
 - [ ] **JetCat / Jet Italia** — 3rd follow-ups sent 2026-07-17 (Jet Italia also WhatsApp); call if still silent by ~2026-07-24.
 - [ ] **Expansion batch (11 delivered 2026-07-21)** — awaiting first replies; follow up any silent by ~2026-07-28.
 
@@ -129,14 +129,14 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 | **CSIR-NAL** | NJ-100 (~1,000 N) | India | rvenkatesh@nal.res.in | 2026-07-21 | Theirs | govt lab — collaboration/eval path, not off-the-shelf |
 | **Fong Jaw Aerospace** | FJ-100 / FJ-1200 | Taiwan | sales@fong-jaw.com | 2026-07-21 | Theirs | asked to confirm complete engine; claims ~Mach 0.95 cruise |
 | **Frank Turbine** | FT400+ / FT450 / FT500 | Austria | mario@frankturbine.com | 2026-07-21 | Theirs | line spans ~38–150 kg thrust |
-| **NEX Power** | 800 N turbojet | UK | info@nex-power.co.uk (+ web form) | 2026-07-21 | Theirs | little public data; also submitting web-portal inquiry |
+| **NEX Power** | 800 N turbojet | UK | info@nex-power.co.uk + web form | 2026-07-21 | Theirs | Email sent + **web-form inquiry submitted 2026-07-21**; little public data |
 | **DG Propulsion** | DG J100 (~100 kgf) | India | info@dgpropulsion.com; civilian@ | 2026-07-21 | Theirs | domain corrected (no hyphen) |
 | **Jets Munt** | M250XBL / XM250NG | Spain | info@jets-munt.com | 2026-07-21 | Theirs | ~250 N — below target class |
 | **SWIWIN** | SW800Pro-Y / SW400Pro-K | China | sales@swiwin.com | 2026-07-21 | Theirs | ~800 / ~400 N; publishes full SLS specs |
 | **Rotorsan** | RTJ-900 / RTJ-900 PRO | Türkiye | info@rotorsan.com | 2026-07-21 | Theirs | no public specs found |
-| **Hongbo Turbo** | JT-1000N (~1,000 N) | China | Kevin@hongboturbo.com | 2026-07-21 | **Mine** | ⚠️ **BOUNCED** (address not found) — reaching via WhatsApp +86 18242549666 / hongboturbo.net web form |
+| **Hongbo Turbo** | JT-1000N (~1,000 N) | China | web form (email bounced) | 2026-07-21 | Theirs | Email to Kevin@hongboturbo.com bounced; **web-form inquiry submitted 2026-07-21** |
 
-**Batch status:** 11 delivered (awaiting first replies), 1 bounced (Hongbo → retry via web form). Kratos/TDI **excluded** (already in active NDA-intake dialogue).
+**Batch status:** 12 in play — 11 delivered by email plus Hongbo via web form (email bounced); NEX Power also submitted a web-form inquiry. All awaiting first replies. Kratos/TDI **excluded** (already in active NDA-intake dialogue).
 
 ---
 
