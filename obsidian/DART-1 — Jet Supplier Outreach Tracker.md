@@ -16,7 +16,7 @@ status: active
 > [!info] What this tracks
 > Every turbojet-engine supplier contacted by email for **DART-1** propulsion sourcing, whose turn it is to act, and when contact last happened.
 > **Design point driving every inquiry:** ~30,000 ft / Mach 1.08 → engine-face **~61 kPa / ~282 K**, strict MTOW (~18 kg vehicle), **two flights same day** on one engine with a restart between.
-> **Last refreshed:** 2026-07-21 · **Suppliers tracked:** 18 (6 core + 12 expansion) · **Ball in my court:** 2 · **Ball with supplier:** 16
+> **Last refreshed:** 2026-07-21 · **Suppliers tracked:** 18 (6 core + 12 expansion) · **Ball in my court:** 3 · **Ball with supplier:** 14 · **Declined:** 1
 
 ---
 
@@ -39,6 +39,7 @@ status: active
 
 - [ ] **KingTech** — Review the K450G4+ data packet Jack sent **2026-07-16** against the design point (61 kPa / 282 K, installed mass vs MTOW, two-flight/restart). Note his caveat: significant thrust loss in cold/thin air.
 - [ ] **AMT (Titan/Orion)** — Bennie sent **partial answers 2026-07-20**; review and reply on the still-open items (Titan 8,000 m ceiling hard-vs-tested, altitude thrust/fuel). Orion remains a Q1-2027 availability risk.
+- [ ] **DG Propulsion (DG J100)** — Spec sheet received 2026-07-21 (Chirag Gupta). Review vs the design point (altitude thrust/fuel at 61 kPa/282 K, installed mass vs MTOW, alt/Mach limits) and reply with follow-up queries.
 - [ ] **PBS** — Stand by for PBS legal on the redlined NDA; be ready to counter-sign quickly so technical data can flow.
 - [ ] **TDI / Kratos** — NDA intake returned to Kevin **2026-07-20**; awaiting NDA + firm quote. Go/no-go still open on ~$100k/engine, ~Jan-2027, ITAR.
 - [ ] **Hongbo (JT-1000N)** — Email bounced; **web-form inquiry submitted 2026-07-21**. Awaiting reply; WhatsApp **+86 18242549666** as backup if silent.
@@ -126,17 +127,17 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 | **GFA Aviation** | LF90 / Leiting 90 | China | market@bjgfa.com | 2026-07-21 | Theirs | awaiting reply |
 | **ZofiTech** | ZT J60 / J80 / J160 | Czechia | info@zofitech.com | 2026-07-21 | Theirs | awaiting reply |
 | **Van der Lee Turbo Systems** | custom ~900 N | Netherlands | info@vdlee.com | 2026-07-21 | Theirs | custom-design inquiry |
-| **CSIR-NAL** | NJ-100 (~1,000 N) | India | rvenkatesh@nal.res.in | 2026-07-21 | Theirs | govt lab — collaboration/eval path, not off-the-shelf |
+| **CSIR-NAL** | NJ-100 (~1,000 N) | India | rvenkatesh@nal.res.in | 2026-07-21 | ❌ Declined | **Not available to foreign firms** — no collaboration/eval/licensing (Sreedhara, Head PBMD, 07-21); revisit only if policy changes |
 | **Fong Jaw Aerospace** | FJ-100 / FJ-1200 | Taiwan | sales@fong-jaw.com | 2026-07-21 | Theirs | asked to confirm complete engine; claims ~Mach 0.95 cruise |
 | **Frank Turbine** | FT400+ / FT450 / FT500 | Austria | mario@frankturbine.com | 2026-07-21 | Theirs | line spans ~38–150 kg thrust |
 | **NEX Power** | 800 N turbojet | UK | info@nex-power.co.uk + web form | 2026-07-21 | Theirs | Email sent + **web-form inquiry submitted 2026-07-21**; little public data |
-| **DG Propulsion** | DG J100 (~100 kgf) | India | info@dgpropulsion.com; civilian@ | 2026-07-21 | Theirs | domain corrected (no hyphen) |
+| **DG Propulsion** | DG J100 (~100 kgf) | India | Chirag Gupta (co-founder) | 2026-07-21 | **Mine** | 📄 **Spec sheet received 07-21** (Cdr. Chirag Gupta, Retd.) — review vs design point + follow up on gaps |
 | **Jets Munt** | M250XBL / XM250NG | Spain | info@jets-munt.com | 2026-07-21 | Theirs | ~250 N — below target class |
 | **SWIWIN** | SW800Pro-Y / SW400Pro-K | China | sales@swiwin.com | 2026-07-21 | Theirs | ~800 / ~400 N; publishes full SLS specs |
 | **Rotorsan** | RTJ-900 / RTJ-900 PRO | Türkiye | info@rotorsan.com | 2026-07-21 | Theirs | no public specs found |
 | **Hongbo Turbo** | JT-1000N (~1,000 N) | China | web form (email bounced) | 2026-07-21 | Theirs | Email to Kevin@hongboturbo.com bounced; **web-form inquiry submitted 2026-07-21** |
 
-**Batch status:** 12 in play — 11 delivered by email plus Hongbo via web form (email bounced); NEX Power also submitted a web-form inquiry. All awaiting first replies. Kratos/TDI **excluded** (already in active NDA-intake dialogue).
+**Batch status (updated 2026-07-21):** First responses in — **DG Propulsion** sent the DG J-100 spec sheet (ball → mine); **CSIR-NAL declined** (NJ-100 not available to foreign firms — closed). 10 still awaiting first reply (Hongbo via web form). Kratos/TDI **excluded** (already in active NDA-intake dialogue).
 
 ---
 
