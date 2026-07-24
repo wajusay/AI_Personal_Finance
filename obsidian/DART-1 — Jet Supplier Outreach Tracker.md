@@ -6,7 +6,7 @@ project: DART-1 (Mach 1 RC record attempt)
 program-lead: Jonas Jusay
 sponsor: Michael Mente (external contacts + spend >$1k route through sponsor)
 created: 2026-07-10
-updated: 2026-07-22
+updated: 2026-07-24
 source: Gmail (jonas.jusay@gmail.com)
 status: active
 ---
@@ -16,7 +16,7 @@ status: active
 > [!info] What this tracks
 > Every turbojet-engine supplier contacted by email for **DART-1** propulsion sourcing, whose turn it is to act, and when contact last happened.
 > **Design point driving every inquiry:** ~30,000 ft / Mach 1.08 → engine-face **~61 kPa / ~282 K**, strict MTOW (~18 kg vehicle), **two flights same day** on one engine with a restart between.
-> **Last refreshed:** 2026-07-22 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 4 · **Ball with supplier:** 14 · **Declined:** 1
+> **Last refreshed:** 2026-07-24 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 4 · **Ball with supplier:** 13 · **Declined:** 2
 
 ---
 
@@ -29,7 +29,7 @@ status: active
 | **KingTech** | K450G4+ | ~450 N | 📄 Data packet received | **Mine** | 2026-07-16 | KingTech (Jack) |
 | **JetCat** | P550-PRO-GH | ~550 N | 📤 No reply — 3rd follow-up sent | **Theirs** | 2026-07-17 | Me (3rd nudge) |
 | **Jet Italia** | Tanus 500N | ~500 N | 📤 No reply — email + WhatsApp sent | **Theirs** | 2026-07-17 | Me (WhatsApp) |
-| **TDI / Kratos** | TDI-J70 | ~560 N | 🔒 NDA to be signed this week; call next week | **Theirs** | 2026-07-22 | TDI (Kevin O'Brien) |
+| **TDI / Kratos** | TDI-J70 | ~560 N | ❌ Declined — will not support project (07-23) | **—** | 2026-07-23 | TDI (Kevin O'Brien) |
 
 **Legend:** 🎾 *Mine* = I owe the next move · *Theirs* = waiting on supplier.
 
@@ -43,10 +43,11 @@ status: active
 - [ ] **Rotorsan (RTJ-900 PRO)** — Replied 07-22 with full specs; offered **mutual NDA + online meeting**. Reply drafted proposing **Fri 7/31 8:00 AM PDT** (tentative hold placed); send it, then sign/return the NDA when it arrives. Strongest expansion lead (PRO's 10,000 m ceiling covers our point).
 - [ ] **Pratt & Whitney (Valox)** — Help-desk email **sent 2026-07-21**; awaiting routing to Military Engines / BD. Long shot (class/mass + ITAR); no action unless they reply.
 - [ ] **PBS** — Stand by for PBS legal on the redlined NDA; be ready to counter-sign quickly so technical data can flow.
-- [ ] **TDI / Kratos** — Kevin (TDY) will **sign the NDA this week** (reply 07-22); discovery call **next week**. Await signed NDA + firm quote; go/no-go still open (~$100k/engine, ~Jan-2027, ITAR).
+- [x] **TDI / Kratos** — ❌ **Declined 07-23** — Kevin: "due to overwhelming demand… decided not to support your project." Closed.
 - [ ] **Hongbo (JT-1000N)** — Email bounced; **web-form inquiry submitted 2026-07-21**. Awaiting reply; WhatsApp **+86 18242549666** as backup if silent.
 - [ ] **JetCat / Jet Italia** — 3rd follow-ups sent 2026-07-17 (Jet Italia also WhatsApp); call if still silent by ~2026-07-24.
-- [ ] **Expansion batch** — Rotorsan replied (see above); 9 others still awaiting first reply; follow up any silent by ~2026-07-28.
+- [ ] **ZofiTech** — Replied 07-23 declining for "manned" use; you clarified 07-23 it's unmanned/RC. Awaiting their reconsideration.
+- [ ] **Expansion batch** — Rotorsan & ZofiTech replied; 8 others still awaiting first reply; follow up any silent by ~2026-07-28.
 
 ---
 
@@ -127,7 +128,7 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 | Supplier | Engine(s) | Country | Recipient | Sent | 🎾 Ball | Notes |
 |---|---|---|---|---|---|---|
 | **GFA Aviation** | LF90 / Leiting 90 | China | market@bjgfa.com | 2026-07-21 | Theirs | awaiting reply |
-| **ZofiTech** | ZT J60 / J80 / J160 | Czechia | info@zofitech.com | 2026-07-21 | Theirs | awaiting reply |
+| **ZofiTech** | ZT J60 / J80 / J160 | Czechia | Tomas Koutsky (info@zofitech.com) | 2026-07-23 | Theirs | Replied 07-23 — declined for "manned application"; **scope clarified 07-23** (unmanned RC), awaiting reconsideration |
 | **Van der Lee Turbo Systems** | custom ~900 N | Netherlands | info@vdlee.com | 2026-07-21 | Theirs | custom-design inquiry |
 | **CSIR-NAL** | NJ-100 (~1,000 N) | India | rvenkatesh@nal.res.in | 2026-07-21 | ❌ Declined | **Not available to foreign firms** — no collaboration/eval/licensing (Sreedhara, Head PBMD, 07-21); revisit only if policy changes |
 | **Fong Jaw Aerospace** | FJ-100 / FJ-1200 | Taiwan | sales@fong-jaw.com | 2026-07-21 | Theirs | asked to confirm complete engine; claims ~Mach 0.95 cruise |
@@ -140,7 +141,7 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 | **Hongbo Turbo** | JT-1000N (~1,000 N) | China | web form (email bounced) | 2026-07-21 | Theirs | Email to Kevin@hongboturbo.com bounced; **web-form inquiry submitted 2026-07-21** |
 | **Pratt & Whitney (RTX)** | Valox family (500–1,800 lbf) | USA | help24@prattwhitney.com (help desk) | 2026-07-21 | Theirs | Surfaced by Michael 07-21. ✅ Amateur-tone help-desk email **sent**; asked to route to Military Engines / BD — awaiting routing. ⚠️ Class too big (min ~500 lbf ≈ 2,200 N) + defense/CCA engine, in development, likely ITAR/not sold to individuals — long shot |
 
-**Batch status (updated 2026-07-22):** **Rotorsan replied 07-22** — full specs + a mutual **NDA/meeting** offer (strongest expansion lead; ball → mine). **DG Propulsion** sent the DG J-100 spec sheet (ball → mine). **CSIR-NAL declined**. 9 still awaiting first reply (Hongbo via web form). **Pratt & Whitney (Valox)** help-desk email sent 07-21, awaiting routing. **Kratos/TDI:** Kevin will **sign the NDA this week**, discovery call next week.
+**Batch status (updated 2026-07-24):** **Rotorsan** — full specs + NDA/meeting (strongest lead; ball mine). **DG Propulsion** — spec sheet (ball mine). **ZofiTech replied 07-23** — declined for "manned" use; scope clarified (unmanned), awaiting reconsideration. **Declined:** CSIR-NAL, and **TDI/Kratos (07-23)** — withdrew citing overwhelming demand. 8 still awaiting first reply (Hongbo via web form). **Pratt & Whitney (Valox)** awaiting help-desk routing.
 
 ---
 
