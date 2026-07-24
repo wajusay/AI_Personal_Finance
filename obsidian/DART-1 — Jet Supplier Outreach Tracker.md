@@ -16,7 +16,7 @@ status: active
 > [!info] What this tracks
 > Every turbojet-engine supplier contacted by email for **DART-1** propulsion sourcing, whose turn it is to act, and when contact last happened.
 > **Design point driving every inquiry:** ~30,000 ft / Mach 1.08 → engine-face **~61 kPa / ~282 K**, strict MTOW (~18 kg vehicle), **two flights same day** on one engine with a restart between.
-> **Last refreshed:** 2026-07-24 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 4 · **Ball with supplier:** 13 · **Declined:** 2
+> **Last refreshed:** 2026-07-24 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 5 · **Ball with supplier:** 12 · **Declined:** 2
 
 ---
 
@@ -47,6 +47,7 @@ status: active
 - [ ] **Hongbo (JT-1000N)** — Email bounced; **web-form inquiry submitted 2026-07-21**. Awaiting reply; WhatsApp **+86 18242549666** as backup if silent.
 - [ ] **JetCat / Jet Italia** — 3rd follow-ups sent 2026-07-17 (Jet Italia also WhatsApp); call if still silent by ~2026-07-24.
 - [ ] **ZofiTech** — Replied 07-23 declining for "manned" use; you clarified 07-23 it's unmanned/RC. Awaiting their reconsideration.
+- [ ] **Frank Turbine** — FT400 datasheet received 07-24; altitude data declined. Gap follow-up drafted (send it) asking for max-altitude limit, installed mass, partial-power fuel flow, two-flight/TBO, export/lead. Marginal fit (440 N, 4.1 kg).
 - [ ] **Expansion batch** — Rotorsan & ZofiTech replied; 8 others still awaiting first reply; follow up any silent by ~2026-07-28.
 
 ---
@@ -132,7 +133,7 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 | **Van der Lee Turbo Systems** | custom ~900 N | Netherlands | info@vdlee.com | 2026-07-21 | Theirs | custom-design inquiry |
 | **CSIR-NAL** | NJ-100 (~1,000 N) | India | rvenkatesh@nal.res.in | 2026-07-21 | ❌ Declined | **Not available to foreign firms** — no collaboration/eval/licensing (Sreedhara, Head PBMD, 07-21); revisit only if policy changes |
 | **Fong Jaw Aerospace** | FJ-100 / FJ-1200 | Taiwan | sales@fong-jaw.com | 2026-07-21 | Theirs | asked to confirm complete engine; claims ~Mach 0.95 cruise |
-| **Frank Turbine** | FT400+ / FT450 / FT500 | Austria | mario@frankturbine.com | 2026-07-21 | Theirs | line spans ~38–150 kg thrust |
+| **Frank Turbine** | FT400 / FT450 / FT500 | Austria | Sandro Bombek / Mario (abr-tools@gmx.at) | 2026-07-24 | **Mine** | 📄 **FT400 datasheet received** (440 N, 4.1 kg engine, EGT 750 °C, €10k, no altitude rating). **Altitude performance declined.** Gap follow-up drafted (max-alt limit, installed mass, two-flight/TBO, export). Marginal: 440 N < ~550 N target + heavy |
 | **NEX Power** | 800 N turbojet | UK | info@nex-power.co.uk + web form | 2026-07-21 | Theirs | Email sent + **web-form inquiry submitted 2026-07-21**; little public data |
 | **DG Propulsion** | DG J100 (~100 kgf) | India | Chirag Gupta (co-founder) | 2026-07-21 | **Mine** | 📄 **Spec sheet received 07-21** (Cdr. Chirag Gupta, Retd.) — review vs design point + follow up on gaps |
 | **Jets Munt** | M250XBL / XM250NG | Spain | info@jets-munt.com | 2026-07-21 | Theirs | ~250 N — below target class |
@@ -141,7 +142,7 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 | **Hongbo Turbo** | JT-1000N (~1,000 N) | China | web form (email bounced) | 2026-07-21 | Theirs | Email to Kevin@hongboturbo.com bounced; **web-form inquiry submitted 2026-07-21** |
 | **Pratt & Whitney (RTX)** | Valox family (500–1,800 lbf) | USA | help24@prattwhitney.com (help desk) | 2026-07-21 | Theirs | Surfaced by Michael 07-21. ✅ Amateur-tone help-desk email **sent**; asked to route to Military Engines / BD — awaiting routing. ⚠️ Class too big (min ~500 lbf ≈ 2,200 N) + defense/CCA engine, in development, likely ITAR/not sold to individuals — long shot |
 
-**Batch status (updated 2026-07-24):** **Rotorsan** — full specs + NDA/meeting (strongest lead; ball mine). **DG Propulsion** — spec sheet (ball mine). **ZofiTech replied 07-23** — declined for "manned" use; scope clarified (unmanned), awaiting reconsideration. **Declined:** CSIR-NAL, and **TDI/Kratos (07-23)** — withdrew citing overwhelming demand. 8 still awaiting first reply (Hongbo via web form). **Pratt & Whitney (Valox)** awaiting help-desk routing.
+**Batch status (updated 2026-07-24):** **Rotorsan** — full specs + NDA/meeting (strongest lead; ball mine). **DG Propulsion** — spec sheet (ball mine). **ZofiTech replied 07-23** — declined for "manned" use; scope clarified (unmanned), awaiting reconsideration. **Declined:** CSIR-NAL, and **TDI/Kratos (07-23)** — withdrew citing overwhelming demand. **Frank Turbine** sent the FT400 datasheet 07-24 (ball → mine; altitude data declined, marginal fit). 7 still awaiting first reply (Hongbo via web form). **Pratt & Whitney (Valox)** awaiting help-desk routing.
 
 ---
 
