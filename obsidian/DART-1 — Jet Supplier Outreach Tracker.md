@@ -16,8 +16,8 @@ status: active
 > [!info] What this tracks
 > Every turbojet-engine supplier contacted by email for **DART-1** propulsion sourcing, whose turn it is to act, and when contact last happened.
 > **Design point driving every inquiry:** ~30,000 ft / Mach 1.08 → engine-face **~61 kPa / ~282 K**, strict MTOW (~18 kg vehicle), **two flights same day** on one engine with a restart between.
-> **Last refreshed:** 2026-07-25 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 3 · **Ball with supplier:** 14 · **Declined:** 2
-> *NDA negotiation active with **Rotorsan** (their one-way NDA redlined to mutual; reply drafted). In my court: Rotorsan (send redline + set up DocuSign), KingTech + DG Propulsion (reviews).*
+> **Last refreshed:** 2026-07-25 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 2 · **Ball with supplier:** 15 · **Declined:** 2
+> *NDA negotiation active with **Rotorsan** (mutual redline sent 07-25; awaiting countersignature). In my court: KingTech + DG Propulsion (reviews).*
 
 ---
 
@@ -38,7 +38,7 @@ status: active
 
 ## ✅ Next actions (my court)
 
-- [ ] **Rotorsan (RTJ-900 PRO)** — NDA redlined to mutual; reply drafted. **Attach `Rotorsan-NDA_REDLINE_mutual_2026-07-25.docx` and send.** Offered DocuSign — get signer name/email, then send envelope; Withers/Michael quick pass first. Fri 7/31 8am PDT meeting on hold.
+- [ ] **Rotorsan (RTJ-900 PRO)** — Mutual redline **sent 07-25** (attached); DocuSign offered. Awaiting countersignature + signer name/email; send DocuSign envelope once they confirm. Fri 7/31 8am PDT meeting on hold.
 - [ ] **KingTech** — Review the K450G4+ data packet Jack sent **2026-07-16** against the design point (61 kPa / 282 K, installed mass vs MTOW, two-flight/restart). Note his caveat: significant thrust loss in cold/thin air.
 - [ ] **AMT (Titan/Orion)** — Bennie sent **partial answers 2026-07-20**; review and reply on the still-open items (Titan 8,000 m ceiling hard-vs-tested, altitude thrust/fuel). Orion remains a Q1-2027 availability risk.
 - [ ] **DG Propulsion (DG J100)** — Spec sheet received 2026-07-21 (Chirag Gupta). Review vs the design point (altitude thrust/fuel at 61 kPa/282 K, installed mass vs MTOW, alt/Mach limits) and reply with follow-up queries.
@@ -140,7 +140,7 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 | **DG Propulsion** | DG J100 (~100 kgf) | India | Chirag Gupta (co-founder) | 2026-07-21 | **Mine** | 📄 **Spec sheet received 07-21** (Cdr. Chirag Gupta, Retd.) — review vs design point + follow up on gaps |
 | **Jets Munt** | M250XBL / XM250NG | Spain | info@jets-munt.com | 2026-07-21 | Theirs | ~250 N — below target class |
 | **SWIWIN** | SW800Pro-Y / SW400Pro-K | China | sales@swiwin.com | 2026-07-21 | Theirs | ~800 / ~400 N; publishes full SLS specs |
-| **Rotorsan** | RTJ-900 / RTJ-900 PRO | Türkiye | Bülent Akyürek (info@rotorsan.com) | 2026-07-25 | **Mine** | 🔒 NDA received (one-way) → **redlined to mutual/bilateral**; reply drafted attaching redline + offering **DocuSign** execution. Send it, then await countersignature + signer name/email. Then RTJ-900 PRO data + call (**Fri 7/31 8am PDT** hold). Full specs in hand; PRO 10,000 m ceiling covers our point. **Strongest lead** |
+| **Rotorsan** | RTJ-900 / RTJ-900 PRO | Türkiye | Bülent Akyürek (info@rotorsan.com) | 2026-07-25 | **Theirs** | 🔒 **Mutual redline sent 07-25** (attached); **DocuSign** offered — awaiting countersignature + signer name/email. Then RTJ-900 PRO data + call (**Fri 7/31 8am PDT** hold). Full specs in hand; PRO 10,000 m ceiling covers our point. **Strongest lead** |
 | **Hongbo Turbo** | JT-1000N (~1,000 N) | China | web form (email bounced) | 2026-07-21 | Theirs | Email to Kevin@hongboturbo.com bounced; **web-form inquiry submitted 2026-07-21** |
 | **Pratt & Whitney (RTX)** | Valox family (500–1,800 lbf) | USA | help24@prattwhitney.com (help desk) | 2026-07-21 | Theirs | Surfaced by Michael 07-21. ✅ Amateur-tone help-desk email **sent**; asked to route to Military Engines / BD — awaiting routing. ⚠️ Class too big (min ~500 lbf ≈ 2,200 N) + defense/CCA engine, in development, likely ITAR/not sold to individuals — long shot |
 
