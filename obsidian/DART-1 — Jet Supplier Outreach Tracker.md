@@ -16,7 +16,8 @@ status: active
 > [!info] What this tracks
 > Every turbojet-engine supplier contacted by email for **DART-1** propulsion sourcing, whose turn it is to act, and when contact last happened.
 > **Design point driving every inquiry:** ~30,000 ft / Mach 1.08 → engine-face **~61 kPa / ~282 K**, strict MTOW (~18 kg vehicle), **two flights same day** on one engine with a restart between.
-> **Last refreshed:** 2026-07-24 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 5 · **Ball with supplier:** 12 · **Declined:** 2
+> **Last refreshed:** 2026-07-24 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 2 · **Ball with supplier:** 15 · **Declined:** 2
+> *Follow-ups / replies sent to all open suppliers 2026-07-24 (one scheduled to send 2026-07-25). Remaining in my court: KingTech + DG Propulsion (internal reviews).*
 
 ---
 
@@ -25,7 +26,7 @@ status: active
 | Supplier | Engine | Class | Stage | 🎾 Ball | Last contact | Who spoke last |
 |---|---|---|---|---|---|---|
 | **PBS Aerospace** | TJ40-G2 / custom | ~400+ N | 🔒 NDA in legal review | **Theirs** | 2026-07-17 | PBS (Frank Jones) |
-| **AMT Netherlands** | Orion + Titan | ~600 / ~392 N | 📄 Partial answers received | **Mine** | 2026-07-20 | AMT (Bennie van de Goor) |
+| **AMT Netherlands** | Orion + Titan | ~600 / ~392 N | 📤 Replied to open items (07-24) | **Theirs** | 2026-07-24 | Me (answered Bennie) |
 | **KingTech** | K450G4+ | ~450 N | 📄 Data packet received | **Mine** | 2026-07-16 | KingTech (Jack) |
 | **JetCat** | P550-PRO-GH | ~550 N | 📤 No reply — 3rd follow-up sent | **Theirs** | 2026-07-17 | Me (3rd nudge) |
 | **Jet Italia** | Tanus 500N | ~500 N | 📤 No reply — email + WhatsApp sent | **Theirs** | 2026-07-17 | Me (WhatsApp) |
@@ -133,12 +134,12 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 | **Van der Lee Turbo Systems** | custom ~900 N | Netherlands | info@vdlee.com | 2026-07-21 | Theirs | custom-design inquiry |
 | **CSIR-NAL** | NJ-100 (~1,000 N) | India | rvenkatesh@nal.res.in | 2026-07-21 | ❌ Declined | **Not available to foreign firms** — no collaboration/eval/licensing (Sreedhara, Head PBMD, 07-21); revisit only if policy changes |
 | **Fong Jaw Aerospace** | FJ-100 / FJ-1200 | Taiwan | sales@fong-jaw.com | 2026-07-21 | Theirs | asked to confirm complete engine; claims ~Mach 0.95 cruise |
-| **Frank Turbine** | FT400 / FT450 / FT500 | Austria | Sandro Bombek / Mario (abr-tools@gmx.at) | 2026-07-24 | **Mine** | 📄 **FT400 datasheet received** (440 N, 4.1 kg engine, EGT 750 °C, €10k, no altitude rating). **Altitude performance declined.** Gap follow-up drafted (max-alt limit, installed mass, two-flight/TBO, export). Marginal: 440 N < ~550 N target + heavy |
+| **Frank Turbine** | FT400 / FT450 / FT500 | Austria | Sandro Bombek / Mario (abr-tools@gmx.at) | 2026-07-24 | **Theirs** | 📤 FT400 datasheet received (440 N, 4.1 kg, no altitude rating); altitude data declined. **Gap follow-up sent 07-24** (max-alt limit, installed mass, two-flight/TBO, export). Marginal: 440 N < ~550 N target + heavy |
 | **NEX Power** | 800 N turbojet | UK | info@nex-power.co.uk + web form | 2026-07-21 | Theirs | Email sent + **web-form inquiry submitted 2026-07-21**; little public data |
 | **DG Propulsion** | DG J100 (~100 kgf) | India | Chirag Gupta (co-founder) | 2026-07-21 | **Mine** | 📄 **Spec sheet received 07-21** (Cdr. Chirag Gupta, Retd.) — review vs design point + follow up on gaps |
 | **Jets Munt** | M250XBL / XM250NG | Spain | info@jets-munt.com | 2026-07-21 | Theirs | ~250 N — below target class |
 | **SWIWIN** | SW800Pro-Y / SW400Pro-K | China | sales@swiwin.com | 2026-07-21 | Theirs | ~800 / ~400 N; publishes full SLS specs |
-| **Rotorsan** | RTJ-900 / RTJ-900 PRO | Türkiye | Bülent Akyürek (info@rotorsan.com) | 2026-07-22 | **Mine** | 📄 **Replied 07-22** with full baseline specs; offered mutual **NDA + online meeting**. RTJ-900 PRO ceiling 10,000 m covers our point; 5-s start + 1 kW starter-gen suit two-flight. Reply drafted; **hold placed Fri 7/31 8am PDT** |
+| **Rotorsan** | RTJ-900 / RTJ-900 PRO | Türkiye | Bülent Akyürek (info@rotorsan.com) | 2026-07-24 | **Theirs** | 📤 **Reply sent 07-24** — NDA requested + meeting proposed (**Fri 7/31 8am PDT** hold). Full specs in hand; PRO 10,000 m ceiling covers our point; 5-s start + 1 kW starter-gen suit two-flight. **Strongest lead** |
 | **Hongbo Turbo** | JT-1000N (~1,000 N) | China | web form (email bounced) | 2026-07-21 | Theirs | Email to Kevin@hongboturbo.com bounced; **web-form inquiry submitted 2026-07-21** |
 | **Pratt & Whitney (RTX)** | Valox family (500–1,800 lbf) | USA | help24@prattwhitney.com (help desk) | 2026-07-21 | Theirs | Surfaced by Michael 07-21. ✅ Amateur-tone help-desk email **sent**; asked to route to Military Engines / BD — awaiting routing. ⚠️ Class too big (min ~500 lbf ≈ 2,200 N) + defense/CCA engine, in development, likely ITAR/not sold to individuals — long shot |
 
