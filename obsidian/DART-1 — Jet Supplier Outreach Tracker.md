@@ -16,8 +16,8 @@ status: active
 > [!info] What this tracks
 > Every turbojet-engine supplier contacted by email for **DART-1** propulsion sourcing, whose turn it is to act, and when contact last happened.
 > **Design point driving every inquiry:** ~30,000 ft / Mach 1.08 → engine-face **~61 kPa / ~282 K**, strict MTOW (~18 kg vehicle), **two flights same day** on one engine with a restart between.
-> **Last refreshed:** 2026-07-28 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 3 · **Ball with supplier:** 14 · **Declined:** 2
-> *07-28: **Rotorsan** mutual NDA (accepted 07-26) **sent for DocuSign signature**. **Frank Turbine** answered fully 07-27 (fallback #2). In my court: Frank, KingTech, DG Propulsion.*
+> **Last refreshed:** 2026-07-28 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 2 · **Ball with supplier:** 15 · **Declined:** 2
+> *07-28: **Rotorsan** mutual NDA (accepted 07-26) **sent for DocuSign signature**. **Frank Turbine** — follow-up drafted 07-28 requesting remaining engine-agnostic interface/limits data (fallback #2). Engine-agnostic data-request sheet created (see Shared artifacts). In my court: KingTech, DG Propulsion.*
 
 ---
 
@@ -49,7 +49,7 @@ status: active
 - [ ] **Hongbo (JT-1000N)** — Email bounced; **web-form inquiry submitted 2026-07-21**. Awaiting reply; WhatsApp **+86 18242549666** as backup if silent.
 - [ ] **JetCat / Jet Italia** — 3rd follow-ups sent 2026-07-17 (Jet Italia also WhatsApp); call if still silent by ~2026-07-24.
 - [ ] **ZofiTech** — Replied 07-23 declining for "manned" use; you clarified 07-23 it's unmanned/RC. Awaiting their reconsideration.
-- [ ] **Frank Turbine** — Answered fully 07-27 (installed ~4.5 kg, two-flight OK, exportable to US, standard nozzle only; **untested at 9 km, no altitude data**). Viable fallback behind Rotorsan — decide: advance (NDA/quote) or park pending Rotorsan outcome. Reply to Sandro either way.
+- [ ] **Frank Turbine** — Answered fully 07-27 (installed ~4.5 kg, two-flight OK, exportable to US, standard nozzle only; **untested at 9 km, no altitude data**). **Follow-up drafted 07-28** in-thread to Sandro (cc office@) requesting the remaining engine-agnostic interface/limits data — CG + bolt pattern, fuel grade/pressure/filtration + 50%/75% flow, ECU voltage/start energy/battery, connector pinouts, throttle protocol + telemetry/fault codes + kill method, redline table (RPM/EGT/fuel pressure/bay temp), duty/cool-down/restarts-per-hour/TBO, vibration/mount temps (framed as integration/W&B due diligence, no test-plan disclosure). Viable fallback (#2) behind Rotorsan.
 - [ ] **Expansion batch** — Rotorsan & ZofiTech replied; 8 others still awaiting first reply; follow up any silent by ~2026-07-28.
 
 ---
@@ -135,7 +135,7 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 | **Van der Lee Turbo Systems** | custom ~900 N | Netherlands | info@vdlee.com | 2026-07-21 | Theirs | custom-design inquiry |
 | **CSIR-NAL** | NJ-100 (~1,000 N) | India | rvenkatesh@nal.res.in | 2026-07-21 | ❌ Declined | **Not available to foreign firms** — no collaboration/eval/licensing (Sreedhara, Head PBMD, 07-21); revisit only if policy changes |
 | **Fong Jaw Aerospace** | FJ-100 / FJ-1200 | Taiwan | sales@fong-jaw.com | 2026-07-21 | Theirs | asked to confirm complete engine; claims ~Mach 0.95 cruise |
-| **Frank Turbine** | FT400 / FT500 | Austria | Sandro Bombek (s.bombek@frankturbine.com) | 2026-07-27 | **Mine** | 📄 **Full answers 07-27:** installed ~4.5 kg (workable), two-flight/restart OK, **exportable to US private buyer**, standard nozzle only. ⚠️ Untested at 9 km — **no altitude data** (validation on us); 440 N < ~550 N target. **Viable fallback (#2)** behind Rotorsan |
+| **Frank Turbine** | FT400 / FT500 | Austria | Sandro Bombek (s.bombek@frankturbine.com; cc office@) | 2026-07-28 | **Theirs** | 📄 **Full answers 07-27:** installed ~4.5 kg (workable), two-flight/restart OK, **exportable to US private buyer**, standard nozzle only. ⚠️ Untested at 9 km — **no altitude data** (validation on us); 440 N < ~550 N target. **Follow-up drafted 07-28** for remaining engine-agnostic interface/limits data (see Next actions). **Viable fallback (#2)** behind Rotorsan |
 | **NEX Power** | 800 N turbojet | UK | info@nex-power.co.uk + web form | 2026-07-21 | Theirs | Email sent + **web-form inquiry submitted 2026-07-21**; little public data |
 | **DG Propulsion** | DG J100 (~100 kgf) | India | Chirag Gupta (co-founder) | 2026-07-21 | **Mine** | 📄 **Spec sheet received 07-21** (Cdr. Chirag Gupta, Retd.) — review vs design point + follow up on gaps |
 | **Jets Munt** | M250XBL / XM250NG | Spain | info@jets-munt.com | 2026-07-21 | Theirs | ~250 N — below target class |
@@ -151,6 +151,14 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 ## 🔧 TDI (Kratos) engine spec reference
 > [!warning] Held locally — not committed
 > The TDI engine spec matrix (J45 / J50 / J70 / J85 / J110) is **TDI Proprietary / ITAR-controlled** and is intentionally **kept out of this repo**. It lives in the local-only copy of this tracker and the original `TDI-Engine Spec Sheets.pdf`. **Commercial summary (shared with team):** J70 is the size fit (~560 N); NDA required before firm quote → discovery telecon; ~180-day lead, deliveries ~Jan 2027; ~$100k/engine ROM; ITAR (US State Dept marketing license + TAA).
+
+---
+
+## 📎 Shared artifacts & request templates
+
+- **Engine-Agnostic Data Request & Bench-Test Parameter Sheet** (Google Doc, 2026-07-28) — supplier-neutral 8-section request (physical, hard limits, fuel, electrical/ECU, control/telemetry, SLS performance, duty/thermal/mechanical, commercial) derived from the RTJ-900 PRO gate, engine-agnostic subset. Framed as pre-purchase engineering due diligence (no test-plan disclosure); includes an internal-only bench-station mapping. Use as the standard info request for any new/existing supplier. → https://docs.google.com/document/d/1OJ7vyxPyxsNlXmN5-tx2D0ZQ03Dd4z-Sk01wylrMOc8/edit
+- **Iron Bird — Bench Test Game Plan** (Google Doc) — what/how/why for the carry-over avionics-power-control spine.
+- **Current-State outreach sheets** (Google Sheets, color-coded green/yellow/red) — shared with Michael & Tino (#black-falcon).
 
 ---
 
