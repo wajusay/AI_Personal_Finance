@@ -16,8 +16,8 @@ status: active
 > [!info] What this tracks
 > Every turbojet-engine supplier contacted by email for **DART-1** propulsion sourcing, whose turn it is to act, and when contact last happened.
 > **Design point driving every inquiry:** ~30,000 ft / Mach 1.08 → engine-face **~61 kPa / ~282 K**, strict MTOW (~18 kg vehicle), **two flights same day** on one engine with a restart between.
-> **Last refreshed:** 2026-07-28 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 2 · **Ball with supplier:** 15 · **Declined:** 2
-> *Sweep 07-28: no new replies since 07-25. **Rotorsan** mutual redline (sent 07-25) awaiting countersignature. In my court: KingTech + DG Propulsion (reviews).*
+> **Last refreshed:** 2026-07-28 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 3 · **Ball with supplier:** 14 · **Declined:** 2
+> *07-28 re-check (corrected): **Rotorsan ACCEPTED the mutual NDA redline 07-26** — signing & stamping, will return signed copy. **Frank Turbine answered fully 07-27** (ball → mine). In my court: Frank, KingTech, DG Propulsion.*
 
 ---
 
@@ -38,7 +38,7 @@ status: active
 
 ## ✅ Next actions (my court)
 
-- [ ] **Rotorsan (RTJ-900 PRO)** — Mutual redline **sent 07-25** (attached); DocuSign offered. Awaiting countersignature + signer name/email; send DocuSign envelope once they confirm. Fri 7/31 8am PDT meeting on hold.
+- [ ] **Rotorsan (RTJ-900 PRO)** — Mutual NDA redline **accepted 07-26**; they're signing/stamping and returning the executed copy. Optionally send a quick "yes, please proceed" to speed it. Once executed → RTJ-900 PRO data + **Fri 7/31 8am PDT** call. Front-runner.
 - [ ] **KingTech** — Review the K450G4+ data packet Jack sent **2026-07-16** against the design point (61 kPa / 282 K, installed mass vs MTOW, two-flight/restart). Note his caveat: significant thrust loss in cold/thin air.
 - [ ] **AMT (Titan/Orion)** — Bennie sent **partial answers 2026-07-20**; review and reply on the still-open items (Titan 8,000 m ceiling hard-vs-tested, altitude thrust/fuel). Orion remains a Q1-2027 availability risk.
 - [ ] **DG Propulsion (DG J100)** — Spec sheet received 2026-07-21 (Chirag Gupta). Review vs the design point (altitude thrust/fuel at 61 kPa/282 K, installed mass vs MTOW, alt/Mach limits) and reply with follow-up queries.
@@ -49,7 +49,7 @@ status: active
 - [ ] **Hongbo (JT-1000N)** — Email bounced; **web-form inquiry submitted 2026-07-21**. Awaiting reply; WhatsApp **+86 18242549666** as backup if silent.
 - [ ] **JetCat / Jet Italia** — 3rd follow-ups sent 2026-07-17 (Jet Italia also WhatsApp); call if still silent by ~2026-07-24.
 - [ ] **ZofiTech** — Replied 07-23 declining for "manned" use; you clarified 07-23 it's unmanned/RC. Awaiting their reconsideration.
-- [ ] **Frank Turbine** — FT400 datasheet received 07-24; altitude data declined. Gap follow-up drafted (send it) asking for max-altitude limit, installed mass, partial-power fuel flow, two-flight/TBO, export/lead. Marginal fit (440 N, 4.1 kg).
+- [ ] **Frank Turbine** — Answered fully 07-27 (installed ~4.5 kg, two-flight OK, exportable to US, standard nozzle only; **untested at 9 km, no altitude data**). Viable fallback behind Rotorsan — decide: advance (NDA/quote) or park pending Rotorsan outcome. Reply to Sandro either way.
 - [ ] **Expansion batch** — Rotorsan & ZofiTech replied; 8 others still awaiting first reply; follow up any silent by ~2026-07-28.
 
 ---
@@ -135,12 +135,12 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 | **Van der Lee Turbo Systems** | custom ~900 N | Netherlands | info@vdlee.com | 2026-07-21 | Theirs | custom-design inquiry |
 | **CSIR-NAL** | NJ-100 (~1,000 N) | India | rvenkatesh@nal.res.in | 2026-07-21 | ❌ Declined | **Not available to foreign firms** — no collaboration/eval/licensing (Sreedhara, Head PBMD, 07-21); revisit only if policy changes |
 | **Fong Jaw Aerospace** | FJ-100 / FJ-1200 | Taiwan | sales@fong-jaw.com | 2026-07-21 | Theirs | asked to confirm complete engine; claims ~Mach 0.95 cruise |
-| **Frank Turbine** | FT400 / FT450 / FT500 | Austria | Sandro Bombek / Mario (abr-tools@gmx.at) | 2026-07-24 | **Theirs** | 📤 FT400 datasheet received (440 N, 4.1 kg, no altitude rating); altitude data declined. **Gap follow-up sent 07-24** (max-alt limit, installed mass, two-flight/TBO, export). Marginal: 440 N < ~550 N target + heavy |
+| **Frank Turbine** | FT400 / FT500 | Austria | Sandro Bombek (s.bombek@frankturbine.com) | 2026-07-27 | **Mine** | 📄 **Full answers 07-27:** installed ~4.5 kg (workable), two-flight/restart OK, **exportable to US private buyer**, standard nozzle only. ⚠️ Untested at 9 km — **no altitude data** (validation on us); 440 N < ~550 N target. **Viable fallback (#2)** behind Rotorsan |
 | **NEX Power** | 800 N turbojet | UK | info@nex-power.co.uk + web form | 2026-07-21 | Theirs | Email sent + **web-form inquiry submitted 2026-07-21**; little public data |
 | **DG Propulsion** | DG J100 (~100 kgf) | India | Chirag Gupta (co-founder) | 2026-07-21 | **Mine** | 📄 **Spec sheet received 07-21** (Cdr. Chirag Gupta, Retd.) — review vs design point + follow up on gaps |
 | **Jets Munt** | M250XBL / XM250NG | Spain | info@jets-munt.com | 2026-07-21 | Theirs | ~250 N — below target class |
 | **SWIWIN** | SW800Pro-Y / SW400Pro-K | China | sales@swiwin.com | 2026-07-21 | Theirs | ~800 / ~400 N; publishes full SLS specs |
-| **Rotorsan** | RTJ-900 / RTJ-900 PRO | Türkiye | Bülent Akyürek (info@rotorsan.com) | 2026-07-25 | **Theirs** | 🔒 **Mutual redline sent 07-25** (attached); **DocuSign** offered — awaiting countersignature + signer name/email. Then RTJ-900 PRO data + call (**Fri 7/31 8am PDT** hold). Full specs in hand; PRO 10,000 m ceiling covers our point. **Strongest lead** |
+| **Rotorsan** | RTJ-900 / RTJ-900 PRO | Türkiye | Bülent Akyürek (info@rotorsan.com) | 2026-07-26 | **Theirs** | ✅ **Mutual NDA redline ACCEPTED 07-26** — Rotorsan to sign & stamp and return signed copy. Then RTJ-900 PRO data + call (**Fri 7/31 8am PDT** hold). PRO 10,000 m ceiling covers our point. **Front-runner — closest to executed NDA** |
 | **Hongbo Turbo** | JT-1000N (~1,000 N) | China | web form (email bounced) | 2026-07-21 | Theirs | Email to Kevin@hongboturbo.com bounced; **web-form inquiry submitted 2026-07-21** |
 | **Pratt & Whitney (RTX)** | Valox family (500–1,800 lbf) | USA | help24@prattwhitney.com (help desk) | 2026-07-21 | Theirs | Surfaced by Michael 07-21. ✅ Amateur-tone help-desk email **sent**; asked to route to Military Engines / BD — awaiting routing. ⚠️ Class too big (min ~500 lbf ≈ 2,200 N) + defense/CCA engine, in development, likely ITAR/not sold to individuals — long shot |
 
