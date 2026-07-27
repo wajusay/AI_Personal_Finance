@@ -6,7 +6,7 @@ project: DART-1 (Mach 1 RC record attempt)
 program-lead: Jonas Jusay
 sponsor: Michael Mente (external contacts + spend >$1k route through sponsor)
 created: 2026-07-10
-updated: 2026-07-25
+updated: 2026-07-28
 source: Gmail (jonas.jusay@gmail.com)
 status: active
 ---
@@ -16,8 +16,8 @@ status: active
 > [!info] What this tracks
 > Every turbojet-engine supplier contacted by email for **DART-1** propulsion sourcing, whose turn it is to act, and when contact last happened.
 > **Design point driving every inquiry:** ~30,000 ft / Mach 1.08 → engine-face **~61 kPa / ~282 K**, strict MTOW (~18 kg vehicle), **two flights same day** on one engine with a restart between.
-> **Last refreshed:** 2026-07-25 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 2 · **Ball with supplier:** 15 · **Declined:** 2
-> *NDA negotiation active with **Rotorsan** (mutual redline sent 07-25; awaiting countersignature). In my court: KingTech + DG Propulsion (reviews).*
+> **Last refreshed:** 2026-07-28 · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 2 · **Ball with supplier:** 15 · **Declined:** 2
+> *Sweep 07-28: no new replies since 07-25. **Rotorsan** mutual redline (sent 07-25) awaiting countersignature. In my court: KingTech + DG Propulsion (reviews).*
 
 ---
 
