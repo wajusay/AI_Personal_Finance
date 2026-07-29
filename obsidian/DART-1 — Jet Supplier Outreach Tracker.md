@@ -16,8 +16,8 @@ status: active
 > [!info] What this tracks
 > Every turbojet-engine supplier contacted by email for **DART-1** propulsion sourcing, whose turn it is to act, and when contact last happened.
 > **Design point driving every inquiry:** ~30,000 ft / Mach 1.08 → engine-face **~61 kPa / ~282 K**, strict MTOW (~18 kg vehicle), **two flights same day** on one engine with a restart between.
-> **Last refreshed:** 2026-07-28 (sweep) · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 2 · **Ball with supplier:** 15 · **Declined:** 2
-> *07-28 sweep: ✅ **Rotorsan mutual NDA FULLY EXECUTED via DocuSign 07-27** (all signers completed; Bülent viewed 08:42 PDT → completed 16:10) — **RTJ-900 PRO data + Fri 7/31 8am PDT call now unlocked**; reply drafted requesting the data package + confirming the call. **Frank Turbine** follow-up sent 07-28, no reply yet (ball theirs). No other new supplier replies. In my court: KingTech, DG Propulsion.*
+> **Last refreshed:** 2026-07-29 (sweep) · **Suppliers tracked:** 19 (6 core + 13 expansion) · **Ball in my court:** 2 · **Ball with supplier:** 14 · **Declined:** 3
+> *07-29 sweep: ❌ **ZofiTech DECLINED 07-29 02:40 PDT** — "not able to serve/deliver to individual customers; focused on institutional OEMs" (a firm OEM-only policy decline, distinct from the earlier "manned" mix-up; unmanned clarification did not reopen it). Closed. · ✅ **Rotorsan mutual NDA FULLY EXECUTED via DocuSign 07-27** — RTJ-900 PRO data + Fri 7/31 8am PDT call unlocked; reply drafted (still in Drafts). **Frank Turbine** follow-up sent, no reply yet (ball theirs). In my court: KingTech, DG Propulsion.*
 
 ---
 
@@ -48,7 +48,7 @@ status: active
 - [x] **TDI / Kratos** — ❌ **Declined 07-23** — Kevin: "due to overwhelming demand… decided not to support your project." Closed.
 - [ ] **Hongbo (JT-1000N)** — Email bounced; **web-form inquiry submitted 2026-07-21**. Awaiting reply; WhatsApp **+86 18242549666** as backup if silent.
 - [ ] **JetCat / Jet Italia** — 3rd follow-ups sent 2026-07-17 (Jet Italia also WhatsApp); call if still silent by ~2026-07-24.
-- [ ] **ZofiTech** — Replied 07-23 declining for "manned" use; you clarified 07-23 it's unmanned/RC. Awaiting their reconsideration.
+- [x] **ZofiTech** — ❌ **Declined 07-29** (Tomas Koutsky, 02:40 PDT): "not able to serve and deliver to individual customers… focused on institutional OEMs." Firm OEM-only policy — the unmanned/RC clarification did not reopen it. Closed; no NDA/data forthcoming. (Optional: brief courtesy acknowledgment.)
 - [ ] **Frank Turbine** — Answered fully 07-27 (installed ~4.5 kg, two-flight OK, exportable to US, standard nozzle only; **untested at 9 km, no altitude data**). **Follow-up sent 07-28** in-thread to Sandro (cc office@) requesting the remaining engine-agnostic interface/limits data — CG + bolt pattern, fuel grade/pressure/filtration + 50%/75% flow, ECU voltage/start energy/battery, connector pinouts, throttle protocol + telemetry/fault codes + kill method, redline gaps (max fuel pressure/bay temp only — RPM/EGT/envelope already on datasheet, excluded to avoid redundancy), duty/cool-down/restarts-per-hour/TBO, vibration/mount temps (framed as integration/W&B due diligence, no test-plan disclosure). **Ball now theirs.** Viable fallback (#2) behind Rotorsan.
 - [ ] **Expansion batch** — Rotorsan & ZofiTech replied; 8 others still awaiting first reply; follow up any silent by ~2026-07-28.
 
@@ -131,7 +131,7 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 | Supplier | Engine(s) | Country | Recipient | Sent | 🎾 Ball | Notes |
 |---|---|---|---|---|---|---|
 | **GFA Aviation** | LF90 / Leiting 90 | China | market@bjgfa.com | 2026-07-21 | Theirs | awaiting reply |
-| **ZofiTech** | ZT J60 / J80 / J160 | Czechia | Tomas Koutsky (info@zofitech.com) | 2026-07-23 | Theirs | Replied 07-23 — declined for "manned application"; **scope clarified 07-23** (unmanned RC), awaiting reconsideration |
+| **ZofiTech** | ZT J60 / J80 / J160 | Czechia | Tomas Koutsky (tomas.koutsky@zofitech.com) | 2026-07-29 | ❌ Declined | **Declined 07-29** — "not able to serve/deliver to individual customers; focused on institutional OEMs." OEM-only policy; unmanned/RC clarification did not reopen it. Closed |
 | **Van der Lee Turbo Systems** | custom ~900 N | Netherlands | info@vdlee.com | 2026-07-21 | Theirs | custom-design inquiry |
 | **CSIR-NAL** | NJ-100 (~1,000 N) | India | rvenkatesh@nal.res.in | 2026-07-21 | ❌ Declined | **Not available to foreign firms** — no collaboration/eval/licensing (Sreedhara, Head PBMD, 07-21); revisit only if policy changes |
 | **Fong Jaw Aerospace** | FJ-100 / FJ-1200 | Taiwan | sales@fong-jaw.com | 2026-07-21 | Theirs | asked to confirm complete engine; claims ~Mach 0.95 cruise |
@@ -144,7 +144,7 @@ Second-wave inquiries to manufacturers beyond the core six, all in/near the ~400
 | **Hongbo Turbo** | JT-1000N (~1,000 N) | China | web form (email bounced) | 2026-07-21 | Theirs | Email to Kevin@hongboturbo.com bounced; **web-form inquiry submitted 2026-07-21** |
 | **Pratt & Whitney (RTX)** | Valox family (500–1,800 lbf) | USA | help24@prattwhitney.com (help desk) | 2026-07-21 | Theirs | Surfaced by Michael 07-21. ✅ Amateur-tone help-desk email **sent**; asked to route to Military Engines / BD — awaiting routing. ⚠️ Class too big (min ~500 lbf ≈ 2,200 N) + defense/CCA engine, in development, likely ITAR/not sold to individuals — long shot |
 
-**Batch status (updated 2026-07-24):** **Rotorsan** — full specs + NDA/meeting (strongest lead; ball mine). **DG Propulsion** — spec sheet (ball mine). **ZofiTech replied 07-23** — declined for "manned" use; scope clarified (unmanned), awaiting reconsideration. **Declined:** CSIR-NAL, and **TDI/Kratos (07-23)** — withdrew citing overwhelming demand. **Frank Turbine** sent the FT400 datasheet 07-24 (ball → mine; altitude data declined, marginal fit). 7 still awaiting first reply (Hongbo via web form). **Pratt & Whitney (Valox)** awaiting help-desk routing.
+**Batch status (updated 2026-07-24):** **Rotorsan** — full specs + NDA/meeting (strongest lead; ball mine). **DG Propulsion** — spec sheet (ball mine). **Declined (3):** CSIR-NAL (foreign-firm policy), **TDI/Kratos (07-23)** — overwhelming demand, and **ZofiTech (07-29)** — OEM-only, won't sell to individuals. **Frank Turbine** sent the FT400 datasheet 07-24 (ball → mine; altitude data declined, marginal fit). 7 still awaiting first reply (Hongbo via web form). **Pratt & Whitney (Valox)** awaiting help-desk routing.
 
 ---
 
